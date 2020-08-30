@@ -1,4 +1,4 @@
-import Persona from './modulo1';
+import Persona from './mod1';
 
 export default class Estudiante extends Persona {
 
