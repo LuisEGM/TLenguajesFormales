@@ -1,0 +1,21 @@
+{
+  "name": "javascript-es6",
+  "version": "1.0.0",
+  "description": "Configuración de node para es6",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server -d --open",
+    "build": "webpack -p"
+  },
+  "author": "Luis Gamez",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
