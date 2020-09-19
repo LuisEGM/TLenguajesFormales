@@ -4,8 +4,8 @@
   "description": "Configuración de node para es6",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server -d --open",
-    "build": "webpack -d"
+    "dev": "npx webpack-dev-server -d --open",
+    "build": "npx webpack -d"
   },
   "author": "Luis Gamez",
   "license": "ISC",
@@ -21,6 +21,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2"
+    "bootswatch": "^4.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
