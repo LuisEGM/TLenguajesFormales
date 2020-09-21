@@ -1,23 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { separarAlfaveto } from '../modules/modulo1';
 
 const Form = () => {
+
+    const [lenguaje,setLenguaje] = useState({});
+
+    const handleChange = e => {
+        setLenguaje({
+            ...lenguaje,
+            [e.target.name]: e.target.value
+        })
+        console.log(lenguaje);
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault();
+        separarAlfaveto(lenguaje);
+    }
+
     return(
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-md-4"> 
-                    <div class="card-body bg-primary target">
-                        <h3 class="text-center">Lenguaje</h3>
-                        <form action="" class="form">
-                            <div class="form-group">
-                                <label class="label-tx" for="nameLenguaje">Nombre del lenguaje</label>
-                                <input type="text" name="nameLenguage" class="form-control" id="nameLenguaje" placeholder="Mi lenguaje"/>
+        <div className="container p-4">
+            <div className="row">
+                <div className="col-md-4"> 
+                    <div className="card-body bg-primary target">
+
+                        <h3 className="text-center">Lenguaje</h3>
+                        
+                        <form onSubmit={handleSubmit} className="form">
+                            <div className="form-group">
+                                <label className="label-tx" htmlFor="nameLenguaje">Nombre del lenguaje</label>
+                                <input autoComplete="off" value={lenguaje.name} onChange={handleChange} type="text" name="nameLenguage" className="form-control" placeholder="Mi lenguaje"/>
                             </div>
-                            <div class="form-group">
-                                <label class="label-tx" for="area-texto">Ingresa el alfabeto</label>
-                                <textarea class="form-control" name="alfabeto" id="area-texto" rows="3"></textarea>
+                            <div className="form-group">
+                                <label className="label-tx" htmlFor="area-texto">Ingresa el alfabeto</label>
+                                <textarea value={lenguaje.alfabeto} onChange={handleChange} className="form-control" name="alfabeto" rows="3"></textarea>
                             </div>
-                            <button class="btn btn-block badge-success boton">Generar Lenguaje</button>
+                            <button className="btn btn-block badge-success boton">Generar Lenguaje</button>
                         </form>
+
                     </div>
                 </div>
             </div>

@@ -13,9 +13,20 @@ nav{
     -moz-box-shadow: -1px 0px 4px 2px rgba(168,168,168,1);
     box-shadow: -1px 0px 4px 2px rgba(168,168,168,1);
 
-    .title-nav {
-        font-size: 1.5rem;
+    .title-nav-left {
+        font-size: 1.3rem;
         margin-left: 3rem;
+    }
+
+    .title-nav-right {
+        font-size: 1.2rem;
+        
+        .item:hover{
+            color: #4ec24e;
+            line-height: 2rem;
+            text-decoration: underline;
+        }
+
     }
 
 }
