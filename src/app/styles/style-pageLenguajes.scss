@@ -1,0 +1,96 @@
+.contenedor-lenguajes{
+    width: 100%;
+    height: 360px;
+    // border: 2px solid red;
+    box-shadow: 0px 0px 15px rgb(158, 158, 158);
+    background-color: #1A1A1A;
+    border-radius: 5px;
+    overflow: auto;
+
+    h3{
+        padding: 10px 0;
+        color: white;
+        margin: 0;
+    }
+
+    .card-item{
+        width: 90%;
+        height: 130px;
+        border: 2px solid black;
+        background-color: #F0F0F0;
+        border-radius: 5px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+
+        .card-top{
+            display: flex;
+            justify-content: space-between;
+            
+            h3{
+                color: black;
+                font-size: 1.3rem;
+                padding: 1.5rem 0 0 1rem;
+            }
+
+            button{
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                background-color: black;
+                font-weight: bold;
+                color: white;
+                position: relative;
+                top: 6px;
+                right: 10px;
+
+                &:hover{
+                    background-color: rgb(255, 92, 92);
+                    outline: none;
+                }
+
+            }
+            
+        }
+
+        .card-info{
+            width: 95%;
+            height: 70px;
+            margin: 0 auto;
+            overflow: auto;
+            p{
+                color: rgb(66, 66, 66);
+                font-size: 1.2rem;
+                line-height: 3rem;
+                padding-bottom: 0;
+                margin: 0;
+            }
+        }
+
+        &:hover{
+            box-shadow: 0px 0px 8px rgb(223, 223, 223);
+            transform: scale(1.003);
+        }
+
+    }
+
+    .doc-blank{
+        width: 40%;
+        height: 40%;
+        margin: 50px auto;
+
+        img{
+            height: 100%;
+            width: 100%;
+            opacity: .4;
+        }
+
+        h4{
+            margin-top: 10px;
+            text-align: center;
+            font-size: 1rem;
+            color: rgb(196, 196, 196);
+        }
+
+    }
+
+}

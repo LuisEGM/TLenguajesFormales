@@ -19,12 +19,23 @@ nav{
     }
 
     .title-nav-right {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         
+        .item{
+            padding: 6px 10px;
+            border-radius: 5px;
+        }
+
         .item:hover{
             color: #4ec24e;
             line-height: 2rem;
             text-decoration: underline;
+        }
+
+        .resaltar{
+            color: #4ec24e;
+            text-decoration: underline;
+            border: 2px solid #4ec24e;
         }
 
     }
@@ -57,6 +68,8 @@ nav{
         .boton:hover{
             color: $blanco;
             background-color: #4ec24e;
+            transform: scale(1.01);
+            box-shadow: 0px 0px 2px black;
         }
 
     }
