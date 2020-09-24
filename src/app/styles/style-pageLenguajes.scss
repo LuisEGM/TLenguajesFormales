@@ -27,9 +27,11 @@
             justify-content: space-between;
             
             h3{
+                text-transform: none;
+                letter-spacing: normal;
                 color: black;
-                font-size: 1.3rem;
-                padding: 1.5rem 0 0 1rem;
+                font-size: 1.7rem;
+                padding: 1rem 0 0 1.2rem;
             }
 
             button{
@@ -53,16 +55,24 @@
         }
 
         .card-info{
-            width: 95%;
-            height: 70px;
+            width: 92%;
+            height: 75px;
             margin: 0 auto;
-            overflow: auto;
-            p{
-                color: rgb(66, 66, 66);
-                font-size: 1.2rem;
-                line-height: 3rem;
-                padding-bottom: 0;
+
+            .alfabeto{
+                height: 60%;
+                width: 100%;
+                overflow: auto;
                 margin: 0;
+                p{
+                    white-space: nowrap;
+                    margin: 0;
+                    color: rgb(66, 66, 66);
+                    font-size: 1.5rem;
+                    height: 100%;
+                    line-height: 2.4rem;
+                    padding-bottom: 0;
+                }
             }
         }
 
@@ -71,6 +81,12 @@
             transform: scale(1.003);
         }
 
+        .cardinalidad{
+            font-size: 1rem;
+            padding-left: 1.2rem;
+            color: red;
+        }
+        
     }
 
     .doc-blank{

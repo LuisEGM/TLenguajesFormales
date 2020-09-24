@@ -54,11 +54,24 @@ nav{
     .form{
         width: 100%;
         border-radius: 5px;
-        
+
+        select{
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        input, textarea{
+            border-radius: 5px;
+        }
+
+        span{
+            color:rgb(207, 207, 207);
+        }
+
         .label-tx{
             color: white;
         }
-        
+
         .boton{
             border-radius: 5px;
             color: white;
