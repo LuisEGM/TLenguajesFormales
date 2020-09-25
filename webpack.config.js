@@ -4,12 +4,16 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 
     entry: {
-        app: "./src/app/app.js"
+        app: "./src/app/index.jsx"
     },
 
     output: {
         path: path.resolve(__dirname,'dist'),
         filename: 'bundle.js' 
+    },
+
+    resolve: {
+        extensions: [".js",".jsx"]
     },
 
     devServer:{
@@ -19,13 +23,33 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /.js$/,
+                test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
                 exclude: /node_modules/
             },
             {
-                test: /.css$/,
+                test: /\.css$/,
                 loader: ["style-loader","css-loader"]
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: [
+                    {
+                        loader: "style-loader"
+                    },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: "sass-loader",
+                        options:{
+                            sourceMap: true
+                        }    
+                    }
+                ]
             }
         ]
     },
