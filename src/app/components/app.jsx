@@ -7,7 +7,20 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Store from '../store';
 
+import { cardinalidadDePalabra} from '../modules/modulo1';
+
 const App = () => {
+
+    //zona Pruebas
+
+    console.log("Cardinalidad De Palabra: " ,cardinalidadDePalabra('sebarr'));
+
+
+
+
+    //cierre de zona
+    
+    
     return(
         <Provider store={Store}>
             <Router>

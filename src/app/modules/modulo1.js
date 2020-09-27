@@ -9,7 +9,7 @@ export const vectorizarAlfabeto = (alfabeto) => {
 export const formatearAlfabeto = (alfabeto) => {
     
     const alfaVec = vectorizarAlfabeto(alfabeto);
-    console.log(alfaVec);
+    //console.log(alfaVec);
     return alfaVec;
 }
 
@@ -33,3 +33,7 @@ export const cardinalidadDeUnLenguaje = (alfabeto) => {
     const cardinalidad = formatearAlfabeto(alfabeto).length;
     return cardinalidad;
 }
+
+export const cardinalidadDePalabra = (palabra) => (
+    palabra.length
+)
