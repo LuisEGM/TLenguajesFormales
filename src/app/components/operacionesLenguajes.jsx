@@ -15,7 +15,6 @@ const OperacionesLenguajes = ({operacionSeleccionada,actualizarOperacionLenguaje
     //     console.log(seleccion);
 
     // }
-
     const handleClick = e => {
         
         actualizarOperacionLenguaje(e.target.id);
