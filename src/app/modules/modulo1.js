@@ -11,7 +11,7 @@ export const formatearAlfabeto = (alfabeto,elemUnidad) => {
     const alfaVec = vectorizarAlfabeto(alfabeto);
     //agrega al comienzo del vector
     alfaVec.unshift(elemUnidad);
-    // console.log(alfaVec);
+    console.log(alfaVec);
     return alfaVec;
 }
 

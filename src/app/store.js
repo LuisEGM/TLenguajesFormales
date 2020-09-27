@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 const initialState = {
     listLenguajes: [
         {
-            nameLenguaje: 'Vacio',
+            nameLenguaje: 'Lenguaje Vacio',
             alfabeto: '',
             elemUnidad: ' ε '
         }

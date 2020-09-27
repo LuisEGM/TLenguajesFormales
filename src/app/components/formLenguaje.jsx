@@ -5,12 +5,10 @@ const FormLenguaje = ({list,agregarLenguaje}) => {
 
     const [namelenguaje,setNameLenguaje] = useState('');
     const [alfabeto,setAlfabeto] = useState('');
-    const [elemUnidad,setElemUnidad] = useState('ε');
 
     const handleChange = e => {
         if(e.target.name == "nameLenguage") setNameLenguaje(e.target.value);
         if(e.target.name == "alfabeto") setAlfabeto(e.target.value);
-        if(e.target.name == "elemUnidad") setElemUnidad(e.target.value);
     }
 
     const handleSubmit = e => {
@@ -31,14 +29,12 @@ const FormLenguaje = ({list,agregarLenguaje}) => {
             else{
                 let lenguaje = {
                     nameLenguaje: namelenguaje,
-                    alfabeto: alfabeto,
-                    elemUnidad: elemUnidad
+                    alfabeto: alfabeto
                 }
                 // console.log(lenguaje);
                 agregarLenguaje(lenguaje);
                 setNameLenguaje('');
                 setAlfabeto('');
-                setElemUnidad('ε');
             }
         }
         else{
@@ -54,19 +50,9 @@ const FormLenguaje = ({list,agregarLenguaje}) => {
                 
                 <form onSubmit={handleSubmit} className="form">
 
-                    <div className="row">
-                        <div className="col-md-7 form-group">
-                            <label className="label-tx" htmlFor="nameLenguaje">Nombre del lenguaje</label>
-                            <input autoComplete="off" value={namelenguaje} onChange={handleChange} type="text" name="nameLenguage" className="form-control" id="nameLenguaje" placeholder="Mi lenguaje"/>
-                        </div>
-                        <div className="col-md-5 form-group">
-                            <label className="label-tx" htmlFor="elemUnidad">Unidad</label>
-                            <select className="form-control" id="elemUnidad" name="elemUnidad" value={elemUnidad} onChange={handleChange}>
-                                <option>ε</option>
-                                <option>λ</option>
-                                <option>β</option>
-                            </select>
-                        </div>
+                    <div className="col-md-7 form-group">
+                        <label className="label-tx" htmlFor="nameLenguaje">Nombre del lenguaje</label>
+                        <input autoComplete="off" value={namelenguaje} onChange={handleChange} type="text" name="nameLenguage" className="form-control" id="nameLenguaje" placeholder="Mi lenguaje"/>
                     </div>
 
                     <div className="form-group">
