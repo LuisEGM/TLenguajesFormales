@@ -4,8 +4,7 @@ const initialState = {
     listLenguajes: [
         {
             nameLenguaje: 'Lenguaje Vacio',
-            alfabeto: '',
-            elemUnidad: ' ε '
+            alfabeto: ' ε '
         }
         
     ],

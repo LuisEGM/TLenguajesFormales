@@ -1,10 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
 //Importando funcuonalidad de los modulos
 import { imprimirAlfabetoFormateado, cardinalidadDeUnLenguaje } from '../modules/modulo1';
 
 const ListLenguaje = ({lista,elimminarLenguaje}) => {
+    
 
     const mostrarLenguajes = () => {
         if(lista.length == 0){
@@ -22,7 +24,7 @@ const ListLenguaje = ({lista,elimminarLenguaje}) => {
                             () => { if(window.confirm(`Seguro que:\n¿ Deseas eliminar el lenguaje "${elem.nameLenguaje}" de la lista ?`)) elimminarLenguaje(elem) }
                         } >X</button>
                     </div>
-                    <div className="cardinalidad">Cardinalidad: {cardinalidadDeUnLenguaje(elem.alfabeto,elem.elemUnidad)}</div>
+                    <div className="cardinalidad">Cardinalidad: {cardinalidadDeUnLenguaje(elem.alfabeto)}</div>
                     <div className="card-info">
                         <div className="alfabeto">
                             <p>{imprimirAlfabetoFormateado(elem)}</p>
