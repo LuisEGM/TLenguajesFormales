@@ -1,7 +1,19 @@
 import { createStore } from 'redux';
 
 const initialState = {
-    listLenguajes: []
+    listLenguajes: [
+        {
+            nameLenguaje: 'Español',
+            alfabeto: 'a c d r f t g v d e r',
+            elemUnidad: '#'
+        },
+        {
+            nameLenguaje: 'Ingles',
+            alfabeto: 'y t j i k w r y x w q',
+            elemUnidad: '&'
+        }
+    ],
+    operacionLenguaje: ''
 }
 
 const reducer = (state=initialState,action) => {
@@ -20,11 +32,18 @@ const reducer = (state=initialState,action) => {
                 ...state,
                 listLenguajes: state.listLenguajes.filter(l => l.nameLenguaje != action.lenguaje.nameLenguaje)
             }
-    
+        
+        case 'ACTUALIZAR_OPERACION_LENGUAJE':
+            return {
+                ...state,
+                operacionLenguaje: action.nuevaOperacion
+            }
+        
         default:
             break;
     }
     
+
     return state;
 }
 

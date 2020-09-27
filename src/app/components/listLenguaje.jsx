@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/style-pageLenguajes.scss';
 import { connect } from 'react-redux';
 
 //Importando funcuonalidad de los modulos

@@ -25,7 +25,12 @@ const Navegacion = ({location}) => {
 
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary navbar">
-            <Link className="navbar-brand title-nav-left" to="/">Teoria De Lenguajes Formales</Link>
+            <div className="title-nav-left">
+                <Link className="contenedor-img" to="/">
+                    <img src="https://www.flaticon.es/svg/static/icons/svg/2092/2092543.svg" alt="Logo"/>
+                </Link>
+                <Link className="navbar-brand text" to="/">Teoria De Lenguajes Formales</Link>
+            </div>
             <div className="title-nav-right">
                 {resaltar()}
             </div>
