@@ -8,7 +8,7 @@ const Navegacion = ({location}) => {
             return (
                 <Fragment>
                     <Link className="navbar-brand item resaltar" to="/">Lenguajes</Link>                
-                    <Link className="navbar-brand item" to="/alfabetos">Alfavetos</Link>
+                    <Link className="navbar-brand item" to="/alfabetos">Alfabetos</Link>
                 </Fragment>
             );
         }
@@ -16,7 +16,7 @@ const Navegacion = ({location}) => {
             return (
                 <Fragment>
                     <Link className="navbar-brand item" to="/">Lenguajes</Link>                
-                    <Link className="navbar-brand item resaltar" to="/alfabetos">Alfavetos</Link>
+                    <Link className="navbar-brand item resaltar" to="/alfabetos">Alfabetos</Link>
                 </Fragment>
             );
         }

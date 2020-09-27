@@ -1,14 +1,14 @@
 //Transforma la propiedad alfabeto del objeto lenguaje.
-export const vectorizarAlfaveto = (alfabeto) => {
-    const vectorAlfaveto = alfabeto.split(" ");
+export const vectorizarAlfabeto = (alfabeto) => {
+    const vectorAlfabeto = alfabeto.split(" ");
     //arregla el bug del espacio en blanco agregado al vector
-    return vectorAlfaveto.filter( e => e != '');
+    return vectorAlfabeto.filter( e => e != '');
 }
 
 //Recibe la propiedad alfabeto(string) la transforma y le agraga el elemento unidad.
 export const formatearAlfabeto = (alfabeto,elemUnidad) => {
     // console.log(alfabeto,elemUnidad);
-    const alfaVec = vectorizarAlfaveto(alfabeto);
+    const alfaVec = vectorizarAlfabeto(alfabeto);
     //agrega al comienzo del vector
     alfaVec.unshift(elemUnidad);
     // console.log(alfaVec);
