@@ -2,16 +2,7 @@ import { createStore } from 'redux';
 
 const initialState = {
     listLenguajes: [
-        {
-            nameLenguaje: 'Español',
-            alfabeto: 'a c d r f t g v d e r',
-            elemUnidad: '#'
-        },
-        {
-            nameLenguaje: 'Ingles',
-            alfabeto: 'y t j i k w r y x w q',
-            elemUnidad: '&'
-        }
+        
     ],
     operacionLenguaje: ''
 }
