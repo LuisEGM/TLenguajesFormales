@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx webpack-dev-server -d --open",
-    "build": "npx webpack -d"
+    "build": "npx webpack -p"
   },
   "author": "Luis Gamez",
   "license": "ISC",

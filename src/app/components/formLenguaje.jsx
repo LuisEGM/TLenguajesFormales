@@ -50,7 +50,7 @@ const FormLenguaje = ({list,agregarLenguaje}) => {
                 
                 <form onSubmit={handleSubmit} className="form">
 
-                    <div className="col-md-7 form-group">
+                    <div className="form-group">
                         <label className="label-tx" htmlFor="nameLenguaje">Nombre del lenguaje</label>
                         <input autoComplete="off" value={namelenguaje} onChange={handleChange} type="text" name="nameLenguage" className="form-control" id="nameLenguaje" placeholder="Mi lenguaje"/>
                     </div>
