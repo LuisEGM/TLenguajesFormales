@@ -37,3 +37,25 @@ export const cardinalidadDeUnLenguaje = (alfabeto) => {
 export const cardinalidadDePalabra = (palabra) => (
     palabra.length
 )
+
+export const invertirPalabra = (palabra) => { // recibir una palabra
+    var x = palabra.length;
+    var palabraInvertida = "";
+  
+    while (x>=0) {
+      palabraInvertida = palabraInvertida + palabra.charAt(x);
+      x--;
+    }
+    return palabraInvertida;
+}
+
+export const invertirLenguaje = (lenguaje) => {// recibir un lenguaje
+    var x = lenguaje.length;
+    var lenguajeInvertido = [];
+
+    for (var i = 0; i <= x; i++){
+        lenguajeInvertido = lenguajeInvertido + lenguaje[i].reverse();
+    }
+    return lenguajeInvertido;
+
+}

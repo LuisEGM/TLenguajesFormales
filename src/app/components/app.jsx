@@ -8,13 +8,16 @@ import { Provider } from 'react-redux';
 import Store from '../store';
 
 import { cardinalidadDePalabra} from '../modules/modulo1';
+import { invertirPalabra} from '../modules/modulo1';
+import { invertirLenguaje} from '../modules/modulo1';
 
 const App = () => {
 
     //zona Pruebas
 
     console.log("Cardinalidad De Palabra: " ,cardinalidadDePalabra('sebarr'));
-
+    console.log("La palabra invertida seria: ",invertirPalabra('sebastian'));
+    console.log("El lenguaje invertido seria: ",invertirLenguaje('sebastian'));
 
 
 
