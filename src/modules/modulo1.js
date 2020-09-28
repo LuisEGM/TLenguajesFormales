@@ -2,7 +2,7 @@
 export const vectorizarAlfabeto = (alfabeto) => {
     const vectorAlfabeto = alfabeto.split(" ");
     //arregla el bug del espacio en blanco agregado al vector
-    return vectorAlfabeto.filter( e => e != '');
+    return vectorAlfabeto.filter( e => e !== '');
 }
 
 //Recibe la propiedad alfabeto(string) la transforma y le agraga el elemento unidad.
@@ -19,7 +19,7 @@ export const imprimirAlfabetoFormateado = (Eleme) => {
     let stringAlf = '{ ';
     alfImp.forEach((e,i) => {
         //cuando llegue al final que no escriba , si no que cierre la llave
-        if(alfImp.length-1 == i){
+        if(alfImp.length-1 === i){
             stringAlf = stringAlf + e + ' }';
         }
         else{
@@ -52,9 +52,19 @@ export const invertirPalabra = (palabra) => { // recibir una palabra
 export const invertirLenguaje = (lenguaje) => {// recibir un lenguaje
     var x = lenguaje.length;
     var lenguajeInvertido = [];
+    console.log(x);
+    console.log(lenguaje);
+    //estaba contando uno de mas con el "<=" en el for
+    for (var i = 0; i < x; i++){
+        //asi no se agrega elementos a un vector en js
+        //lenguajeInvertido = lenguajeInvertido + lenguaje[i].reverse();
+        
+        //eso ni en c++ jala, otra seria asi
+        //lenguajeInvertido[i] = lenguaje[i].reverse();
 
-    for (var i = 0; i <= x; i++){
-        lenguajeInvertido = lenguajeInvertido + lenguaje[i].reverse();
+        //la manera correcta es push o concat
+        console.log(lenguaje[i]);
+        lenguajeInvertido.push(invertirPalabra(lenguaje[i]));
     }
     return lenguajeInvertido;
 

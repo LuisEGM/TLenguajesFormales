@@ -22,7 +22,7 @@ const OperacionesLenguajes = ({operacionSeleccionada,actualizarOperacionLenguaje
         document.getElementById(e.target.id).classList.add('seleccionado');
         document.querySelectorAll('li').forEach(elem => {
             // console.log(e.id);
-            if(elem.id != e.target.id){
+            if(elem.id !== e.target.id){
                 // console.log(e.id ," ? ",seleccion); 
                 // debugger;
                 if(elem.classList.contains('seleccionado')){

@@ -7,9 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Store from '../store';
 
-import { cardinalidadDePalabra} from '../modules/modulo1';
-import { invertirPalabra} from '../modules/modulo1';
-import { invertirLenguaje} from '../modules/modulo1';
+import { cardinalidadDePalabra, invertirPalabra, invertirLenguaje} from '../modules/modulo1';
 
 const App = () => {
 
@@ -17,7 +15,7 @@ const App = () => {
 
     console.log("Cardinalidad De Palabra: " ,cardinalidadDePalabra('sebarr'));
     console.log("La palabra invertida seria: ",invertirPalabra('sebastian'));
-    console.log("El lenguaje invertido seria: ",invertirLenguaje('sebastian'));
+    console.log("El lenguaje invertido seria: ",invertirLenguaje(["carro","bota","cafe","solo","algo"]));
 
 
 

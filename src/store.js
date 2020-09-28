@@ -25,7 +25,7 @@ const reducer = (state=initialState,action) => {
         case 'ELIMINAR_LENGUAJE':
             return {
                 ...state,
-                listLenguajes: state.listLenguajes.filter(l => l.nameLenguaje != action.lenguaje.nameLenguaje)
+                listLenguajes: state.listLenguajes.filter(l => l.nameLenguaje !== action.lenguaje.nameLenguaje)
             }
         
         case 'ACTUALIZAR_OPERACION_LENGUAJE':

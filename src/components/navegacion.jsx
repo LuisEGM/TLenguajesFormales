@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navegacion = ({location}) => {
 
     const resaltar = () => {
-        if(location == "pagelenguajes"){
+        if(location === "pagelenguajes"){
             return (
                 <Fragment>
                     <Link className="navbar-brand item resaltar" to="/">Lenguajes</Link>                
@@ -12,7 +12,7 @@ const Navegacion = ({location}) => {
                 </Fragment>
             );
         }
-        if(location == "pagealfabetos"){
+        if(location === "pagealfabetos"){
             return (
                 <Fragment>
                     <Link className="navbar-brand item" to="/">Lenguajes</Link>                

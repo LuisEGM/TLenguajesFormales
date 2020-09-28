@@ -7,8 +7,8 @@ const FormLenguaje = ({list,agregarLenguaje}) => {
     const [alfabeto,setAlfabeto] = useState('');
 
     const handleChange = e => {
-        if(e.target.name == "nameLenguage") setNameLenguaje(e.target.value);
-        if(e.target.name == "alfabeto") setAlfabeto(e.target.value);
+        if(e.target.name === "nameLenguage") setNameLenguaje(e.target.value);
+        if(e.target.name === "alfabeto") setAlfabeto(e.target.value);
     }
 
     const handleSubmit = e => {
@@ -17,11 +17,11 @@ const FormLenguaje = ({list,agregarLenguaje}) => {
         var existe = false;
         // console.log("lista a comparar",list);
         list.forEach(e => {
-            if(e.nameLenguaje == namelenguaje) return existe=true;
+            if(e.nameLenguaje === namelenguaje) return existe=true;
         })
 
         //comprueba que los campos esten llenos
-        if(namelenguaje != '' && alfabeto != ''){
+        if(namelenguaje !== '' && alfabeto !== ''){
             //y que el nombre del lenguaje no se repita
             if(existe){
                 alert("El nombre de tu lenguaje ya fue asignado a otro previamente.\nIntenta con otro...!");

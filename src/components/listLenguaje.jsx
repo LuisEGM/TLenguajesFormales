@@ -9,7 +9,7 @@ const ListLenguaje = ({lista,elimminarLenguaje}) => {
     
 
     const mostrarLenguajes = () => {
-        if(lista.length == 0){
+        if(lista.length === 0){
             return <div className="doc-blank" >
                 <img src="https://www.flaticon.es/svg/static/icons/svg/187/187293.svg" alt="docs"/>
                 <h4>¡ Nada por aquí !</h4>

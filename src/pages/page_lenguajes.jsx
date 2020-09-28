@@ -13,7 +13,7 @@ const Page_lenguajes = ({actualizarOperacionLenguaje}) => {
         //esto es solo para quitar la seleccion en el menu
         document.querySelectorAll('li').forEach(elem => {
             // console.log(e.id);
-            if(elem.id != e.target.id){
+            if(elem.id !== e.target.id){
                 // console.log(e.id ," ? ",seleccion); 
                 // debugger;
                 if(elem.classList.contains('seleccionado')){
