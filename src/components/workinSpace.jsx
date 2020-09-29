@@ -1,24 +1,42 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 const WorkinSpace = ({lenguajes,operacionSeleccionada}) => {
+
+    const [lenguajesSeleccionado,setlenguajesSeleccionado] = useState([]);
+
+    const handleChange = e => {
+        console.log("change");
+    }
+
+    const handleClick = e => {
+        console.log("click sirve");
+    }
 
     const espacioDeOperaciones = () => {
 
         switch (operacionSeleccionada) {
 
             case 'inverso':
-                return <h3>Inverso</h3>
-                // return (<Fragment>
-                //     <h3>Inverso de un lenguaje</h3>
-                //     <div className="inverso__form">
-                //         <select class="form-control">
-                //             {lenguajes.map(e => (
-                //                 <option key={e.nameLenguaje}>{e.nameLenguaje}</option>
-                //             ))}
-                //         </select>
-                //     </div>
-                // </Fragment>);
+                return (
+                    <div className="inverso">
+                        <h3>Inverso de un lenguaje</h3>
+                        <div className="inverso__form">
+                            <select onChange={handleChange} defaultValue="defecto" className="form-control">
+                                {lenguajes.map(e => (
+                                    <option name="inversoLenguaje" key={e.nameLenguaje}>{e.nameLenguaje}</option>
+                                ))}
+                            </select>
+                            <button onClick={handleClick} className="btn btn-primary boton">GO</button>
+                        </div>
+                        <div className="salida">
+                            <p>
+                            {
+                                
+                            }
+                            </p>
+                        </div>
+                    </div>);
                 
 
             case 'potencia':

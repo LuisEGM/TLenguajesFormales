@@ -5,7 +5,7 @@ import WorkinSpace from './workinSpace';
 
 // import {useState} from 'react';
 
-const OperacionesLenguajes = ({operacionSeleccionada,actualizarOperacionLenguaje}) => {
+const OperacionesLenguajes = ({actualizarOperacionLenguaje}) => {
 
     // PARA REVISAR NO ACTUALIZA EN EL PRIMER CLICK.
     // const [seleccion, setSeleccion] = useState('');
@@ -38,7 +38,7 @@ const OperacionesLenguajes = ({operacionSeleccionada,actualizarOperacionLenguaje
         <Fragment>
             <div className="col-md-3 menu">
                 <ul>
-                    <li id="inverso" onClick={handleClick} >Inverso del lenguaje</li>
+                    <li id="inverso" onClick={handleClick} >Inverso de un lenguaje</li>
                     <li id="potencia" onClick={handleClick} >Potencia de un lenguaje</li>
                     <li id="concatenacion" onClick={handleClick} >Concatenación de lenguajes</li>
                     <li id="interseccion" onClick={handleClick} >Intersección de lenguajes</li>
@@ -54,9 +54,7 @@ const OperacionesLenguajes = ({operacionSeleccionada,actualizarOperacionLenguaje
     
 }
 
-const mapStateToProps = state => ({
-    operacionSeleccionada: state.operacionLenguaje
-})
+const mapStateToProps = state => ({})
 
 const mapDispatchToProps = dispatch => ({
 
