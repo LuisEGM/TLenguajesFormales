@@ -62,19 +62,6 @@
 
     }
 
-    .salida{
-        background-color: white;
-        height: 60%;
-        border-radius: 5px;
-        display: flex;
-        font-size: 1.5rem;
-        overflow: auto;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-
-    }
-
     .workin-space{
         border-left: 5px solid white;
         height: 100%;
@@ -122,7 +109,7 @@
             }
         }
 
-        .inverso{
+        .formulario-seleccion-lenguaje{
 
             width: 100%;
             height: 100%;
@@ -130,37 +117,27 @@
 
             &__form{
                 width: 70%;
-                height: 20px;
+                height: 60px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 40px auto;
-                
-                .form-group{
-                    margin-top: 20px 0 0 0;
-                    display: flex;
-                    width: 100%;
-                    label{
-                        margin-right: 20px;
-                        color: white;
-                        padding: 0;
-                    }
-                    select{
-                        border-radius: 5px;
-                        font-size: 1rem;
-                    }
+                margin: 20px auto;
+                border: 1px solid rgb(73, 196, 73);
+                border-radius: 5px;
+                label{
+                    margin: 10px;
+                    color: white;
+                    padding: 0;
                 }
-
-
+                select{
+                    border-radius: 5px;
+                    font-size: 1rem;
+                }
+                
                 .boton{
                     background-color: #45AC4E;
-                    position: relative;
-                    bottom: 8px;
-                    right: 20px;
                     border-radius: 5px;
-                    // width: 70px;
                     height: 48px;
-                    margin-left: 20px;
                     font-size: 1rem;
                 }
 
@@ -170,12 +147,76 @@
 
             }
 
+            .salida{
+                background-color: white;
+                height: 60%;
+                border-radius: 5px;
+                display: flex;
+                font-size: 1.5rem;
+                overflow: auto;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+        
+            }
+
         }
 
-        .union{
+        .formato-seleccion-lenguajes{
             width: 100%;
             height: 100%;
-            background-color: red;
+            // background-color: red;
+
+            .row-1{
+                width: 40%;
+                margin: 0 auto;
+                border: 1px solid rgb(73, 196, 73);
+                border-radius: 5px;
+                padding: 10px;
+                label{
+                    text-align: center;
+                }
+                select{
+                    border-radius: 5px;
+                    font-size: 1rem;
+                }
+            }
+
+            .row-2{
+                width: 96%;
+                margin: 10px auto;
+                border: 1px solid rgb(73, 196, 73);
+                padding: 10px;
+                border-radius: 5px;
+                
+                select{
+                    border-radius: 5px;
+                    font-size: 1rem;
+                }
+
+            }
+
+            .boton{
+                margin-top: 10px;
+                border-radius: 5px;
+                font-size: 1rem;
+                background-color: rgb(73, 196, 73);
+            }
+
+            .Salida{
+                width: 96%;
+                margin: 8px auto;
+                background-color: white;
+                height: 25%;
+                border-radius: 5px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+                overflow: auto;
+            }
+
         }
 
     }

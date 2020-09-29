@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const UnionLenguajes = ({lenguajes}) => {
 
-    const [numeroDeLenguajes,setNumeroDeLenguajes] = useState(0);
+    const [numeroDeLenguajes,setNumeroDeLenguajes] = useState(2);
     const [nombresDeLenguajesSeleccionados,setNombresDeLenguajesSeleccionados] = useState([]);
 
     
@@ -18,13 +18,13 @@ const UnionLenguajes = ({lenguajes}) => {
 
     
     const handleChange = e => {
-        if(e.target.value > 0){
+        if(e.target.value >= 2){
             // console.log(e.target.value);
             setNumeroDeLenguajes(e.target.value)
         }
         else{
             console.log(e.target.value);
-            setNumeroDeLenguajes(0);            
+            setNumeroDeLenguajes(2);            
         }
     }
 
@@ -65,21 +65,21 @@ const UnionLenguajes = ({lenguajes}) => {
     }
 
     return(
-        <div className="union">
+        <div className="formato-seleccion-lenguajes">
             <h3>Union entre lenguajes</h3>
 
             <form onSubmit={handleSubmit}>
-                <div className="form-row">
+                <div className="form-row row-1">
                     <div className="col">
-                        <label htmlFor="numerolenguajes">Selecciona el numero de lenguajes a unir</label>
+                        <label htmlFor="numerolenguajes">Numero de lenguajes</label>
                         <select onChange={handleChange} id="numerolenguajes" value={numeroDeLenguajes} className="form-control">
-                            <option>0</option>
-                            {lenguajes.map((e,i) => <option key={i}>{i+1}</option>)}
+                            <option>2</option>
+                            {lenguajes.map((e,i) => {if(i>=2){return <option key={i}>{i+1}</option>}})}
                         </select>
                     </div>
                 </div>
 
-                <div className="form-row">
+                <div className="form-row row-2">
                     {mostrarBarrasDeSeleccion()}
                 </div>
 
@@ -88,7 +88,9 @@ const UnionLenguajes = ({lenguajes}) => {
                 </div>
 
             </form>
-
+            <div className="Salida">
+                <p>Aqui se llama a la funcion que se encarga de unir los lenguajes sleecionados y se muestra el resultado</p>
+            </div>
         </div>
     );
 

@@ -10,7 +10,7 @@ const InvertirLenguajes = ({lenguajes}) => {
 
     const handleChange = e => {
         // console.log("change => ",e.target.value);
-        if(e.target.value != 'Lenguajes...'){
+        if(e.target.value !== 'Lenguajes...'){
             //para que no se quede el resultado anterior
             setSalida([]);
             // console.log("change dentro del if",e.target.value);
@@ -26,6 +26,7 @@ const InvertirLenguajes = ({lenguajes}) => {
     }
 
     const handleClick = e => {
+        e.preventDefault();
         console.log(seleccion);
         if(seleccion !== 'Lenguajes...'){
             let Lenguaje = lenguajes.filter(e => e.nameLenguaje === seleccion);
@@ -38,22 +39,24 @@ const InvertirLenguajes = ({lenguajes}) => {
     }
 
     return (
-        <div className="inverso">
+        <div className="formulario-seleccion-lenguaje">
             <h3>Inverso de un lenguaje</h3>
-            <div className="inverso__form">
-                <div className="form-group">
-                    <label htmlFor="lenguajeSeleccionado">Selecciona un lenguaje</label>
-                    <select onChange={handleChange} value={seleccion} className="form-control" id="lenguajeSeleccionado">
-                        <option>Lenguajes...</option>
-                        {lenguajes.map(e => <option key={e.nameLenguaje}>{e.nameLenguaje}</option>)}
-                    </select>
-                </div>
+            <form className="formulario-seleccion-lenguaje__form form-inline">
+                
+                    <div className="form-group row-custom">
+                        <label htmlFor="lenguajeSeleccionado">Selecciona un lenguaje</label>
+                        <select onChange={handleChange} value={seleccion} className="form-control" id="lenguajeSeleccionado">
+                            <option>Lenguajes...</option>
+                            {lenguajes.map(e => <option key={e.nameLenguaje}>{e.nameLenguaje}</option>)}
+                        </select>
+                    </div>
+                
                 <div className="col-auto">
                     <button onClick={handleClick} className="btn btn-success boton">Go</button>
                 </div>
-            </div>
+            </form>
             <div className="salida">
-                {lenguajes.length != 0 && 
+                {lenguajes.length !== 0 && 
                 <Fragment>
                     <p>{imprimirAlfabetoFormateado(lenguaje.alfabeto)}</p>
                     <p>=</p>
