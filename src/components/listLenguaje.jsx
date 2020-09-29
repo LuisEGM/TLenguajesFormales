@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-
 //Importando funcuonalidad de los modulos
 import { imprimirAlfabetoFormateado, cardinalidadDeUnLenguaje } from '../modules/modulo1';
 
@@ -27,7 +26,7 @@ const ListLenguaje = ({lista,elimminarLenguaje}) => {
                     <div className="cardinalidad">Cardinalidad: {cardinalidadDeUnLenguaje(elem.alfabeto)}</div>
                     <div className="card-info">
                         <div className="alfabeto">
-                            <p>{imprimirAlfabetoFormateado(elem)}</p>
+                            <p>{imprimirAlfabetoFormateado(elem.alfabeto)}</p>
                         </div>
                     </div>                    
                 </div>

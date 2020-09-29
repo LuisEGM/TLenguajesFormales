@@ -66,6 +66,13 @@
         background-color: white;
         height: 60%;
         border-radius: 5px;
+        display: flex;
+        font-size: 1.5rem;
+        overflow: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .workin-space{
@@ -122,22 +129,36 @@
             // background-color: red;
 
             &__form{
-                width: 40%;
+                width: 70%;
                 height: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 35px auto;
+                margin: 40px auto;
                 
-                select{
-                    border-radius: 5px;
-                    font-size: 1rem;
+                .form-group{
+                    margin-top: 20px 0 0 0;
+                    display: flex;
+                    width: 100%;
+                    label{
+                        margin-right: 20px;
+                        color: white;
+                        padding: 0;
+                    }
+                    select{
+                        border-radius: 5px;
+                        font-size: 1rem;
+                    }
                 }
+
 
                 .boton{
                     background-color: #45AC4E;
+                    position: relative;
+                    bottom: 8px;
+                    right: 20px;
                     border-radius: 5px;
-                    width: 70px;
+                    // width: 70px;
                     height: 48px;
                     margin-left: 20px;
                     font-size: 1rem;

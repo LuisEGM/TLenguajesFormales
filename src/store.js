@@ -2,11 +2,18 @@ import { createStore } from 'redux';
 
 const initialState = {
     listLenguajes: [
-        {
-            nameLenguaje: 'Lenguaje Vacio',
-            alfabeto: ' ε '
-        }
-        
+        // {
+        //     nameLenguaje: 'Lenguaje Vacio',
+        //     alfabeto: 'ε'
+        // },
+        // {
+        //     nameLenguaje: 'Español',
+        //     alfabeto: 'ab bc cd de ef fg hi'
+        // },
+        // {
+        //     nameLenguaje: 'Ingles',
+        //     alfabeto: 'carro loma pila oso rata gato lima'
+        // }
     ],
     operacionLenguaje: ''
 }

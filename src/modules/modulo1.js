@@ -5,7 +5,7 @@ export const vectorizarAlfabeto = (alfabeto) => {
     return vectorAlfabeto.filter( e => e !== '');
 }
 
-//Recibe la propiedad alfabeto(string) la transforma y le agraga el elemento unidad.
+//Recibe la propiedad alfabeto(string) la transforma
 export const formatearAlfabeto = (alfabeto) => {
     
     const alfaVec = vectorizarAlfabeto(alfabeto);
@@ -13,24 +13,25 @@ export const formatearAlfabeto = (alfabeto) => {
     return alfaVec;
 }
 
-export const imprimirAlfabetoFormateado = (Eleme) => {
-    const {alfabeto} = Eleme
-    const alfImp = formatearAlfabeto(alfabeto);
-    let stringAlf = '{ ';
-    alfImp.forEach((e,i) => {
-        //cuando llegue al final que no escriba , si no que cierre la llave
-        if(alfImp.length-1 === i){
-            stringAlf = stringAlf + e + ' }';
-        }
-        else{
-            stringAlf = stringAlf + e + ', ';
-        }
-    })
-    return stringAlf;
+export const imprimirAlfabetoFormateado = (alfabeto) => {
+    
+    if(alfabeto.length !== 0){
+        let stringAlf = '{ ';
+        alfabeto.forEach((e,i) => {
+            //cuando llegue al final que no escriba , si no que cierre la llave
+            if(alfabeto.length-1 === i){
+                stringAlf = stringAlf + e + ' }';
+            }
+            else{
+                stringAlf = stringAlf + e + ', ';
+            }
+        })
+        return stringAlf;
+    }
 }
 
 export const cardinalidadDeUnLenguaje = (alfabeto) => {
-    const cardinalidad = formatearAlfabeto(alfabeto).length;
+    const cardinalidad = alfabeto.length;
     return cardinalidad;
 }
 

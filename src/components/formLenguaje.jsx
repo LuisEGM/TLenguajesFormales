@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
+import { formatearAlfabeto } from '../modules/modulo1';
+
 const FormLenguaje = ({list,agregarLenguaje}) => {
 
     const [namelenguaje,setNameLenguaje] = useState('');
@@ -27,9 +29,10 @@ const FormLenguaje = ({list,agregarLenguaje}) => {
                 alert("El nombre de tu lenguaje ya fue asignado a otro previamente.\nIntenta con otro...!");
             }
             else{
+                let alfabetoFormateado = formatearAlfabeto(alfabeto)
                 let lenguaje = {
                     nameLenguaje: namelenguaje,
-                    alfabeto: alfabeto
+                    alfabeto: alfabetoFormateado
                 }
                 // console.log(lenguaje);
                 agregarLenguaje(lenguaje);
