@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 //Importando funcuonalidad de los modulos
-import { imprimirAlfabetoFormateado, cardinalidadDeUnLenguaje } from '../modules/modulo1';
+import { imprimirAlfabetoFormateadoLen, cardinalidadDeUnLenguaje } from '../modules/modulo1';
 
 const ListLenguaje = ({lista,elimminarLenguaje}) => {
     
@@ -19,13 +19,21 @@ const ListLenguaje = ({lista,elimminarLenguaje}) => {
                     <div className="card-top">
                         <h3>{elem.nameLenguaje}</h3>
                         <button onClick={
-                            () => { if(window.confirm(`Seguro que:\n¿ Deseas eliminar el lenguaje "${elem.nameLenguaje}" de la lista ?`)) elimminarLenguaje(elem) }
+                            () => {
+                                if(elem.nameLenguaje === 'Vacio' || elem.nameLenguaje === 'Lenguaje Vacio'){
+                                    alert("ALERTA... Este lenguaje es estandar\nde las operaciones entre lenguajes\nNo se puede borrar...!");
+                                }
+                                else{
+                                    if(window.confirm(`Seguro que:\n¿ Deseas eliminar el lenguaje "${elem.nameLenguaje}" de la lista ?`))
+                                    elimminarLenguaje(elem)
+                                }
+                            }
                         } >X</button>
                     </div>
-                    <div className="cardinalidad">Cardinalidad: {cardinalidadDeUnLenguaje(elem.alfabeto)}</div>
+                    <div className="cardinalidad">Cardinalidad: {cardinalidadDeUnLenguaje(elem)}</div>
                     <div className="card-info">
                         <div className="alfabeto">
-                            <p>{imprimirAlfabetoFormateado(elem.alfabeto)}</p>
+                            <p>{imprimirAlfabetoFormateadoLen(elem)}</p>
                         </div>
                     </div>                    
                 </div>

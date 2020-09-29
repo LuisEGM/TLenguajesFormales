@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { connect } from 'react-redux';
 
-const UnionLenguajes = ({lenguajes}) => {
+const ConcatenacionLenguajes = ({lenguajes}) => {
 
     const [numeroDeLenguajes,setNumeroDeLenguajes] = useState(2);
     const [nombresDeLenguajesSeleccionados,setNombresDeLenguajesSeleccionados] = useState([]);
@@ -9,6 +9,7 @@ const UnionLenguajes = ({lenguajes}) => {
     useEffect(()=>{
         mostrarBarrasDeSeleccion();
     },[numeroDeLenguajes])
+
     
     useEffect(()=>{
         console.log(nombresDeLenguajesSeleccionados);
@@ -17,7 +18,6 @@ const UnionLenguajes = ({lenguajes}) => {
     
     const handleChange = e => {
         if(e.target.value >= 2){
-            // console.log(e.target.value);
             setNumeroDeLenguajes(e.target.value)
         }
         else{
@@ -30,12 +30,9 @@ const UnionLenguajes = ({lenguajes}) => {
         //SU Seleccionado para Union
         e.preventDefault();
 
-        // let elemento = document.getElementById("lenguaje1SU");
-        // console.log(elemento.value);
-
         let nombresLenguajesSeleccionados = [];
         for (let i=0 ; i < numeroDeLenguajes ; i++) {
-            let elemento = document.getElementById(`lenguaje${i+1}SU`);
+            let elemento = document.getElementById(`lenguaje${i+1}`);
             if(elemento != null){
                 nombresLenguajesSeleccionados.push(elemento.value);
             }
@@ -51,8 +48,8 @@ const UnionLenguajes = ({lenguajes}) => {
 
         return vector.map((e,i)=>(
             <div key={i+1} className="col">
-                <label htmlFor={`lenguaje${i+1}SU`}>Selecciona el lenguaje {`${i+1}`}</label>
-                <select id={`lenguaje${i+1}SU`} className="form-control">
+                <label htmlFor={`lenguaje${i+1}`}>Selecciona el lenguaje {`${i+1}`}</label>
+                <select id={`lenguaje${i+1}`} className="form-control">
                     <option>Lenguaje...</option>
                     {lenguajes.map(e => <option key={e.nameLenguaje}>{e.nameLenguaje}</option>)}
                 </select>
@@ -64,7 +61,7 @@ const UnionLenguajes = ({lenguajes}) => {
 
     return(
         <div className="formato-seleccion-lenguajes">
-            <h3>Union entre lenguajes</h3>
+            <h3>Concatenación entre lenguajes</h3>
 
             <form onSubmit={handleSubmit}>
                 <div className="form-row row-1">
@@ -87,10 +84,12 @@ const UnionLenguajes = ({lenguajes}) => {
 
             </form>
             <div className="Salida">
-                <p>Aqui se llama a la funcion que se encarga de unir los lenguajes sleecionados y se muestra el resultado</p>
+                <p>Aqui se llama a la funcion que se encarga de concatenar los lenguajes selecionados y se muestra el resultado</p>
             </div>
         </div>
     );
+
+
 
 }
 
@@ -100,4 +99,4 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispach => ({})
 
-export default connect(mapStateToProps,mapDispatchToProps)(UnionLenguajes);
+export default connect(mapStateToProps,mapDispatchToProps)(ConcatenacionLenguajes);

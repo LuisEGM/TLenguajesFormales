@@ -2,6 +2,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 import InvertirLenguaje from './operacionesLenguajes/invertirLenguaje';
 import UnionLenguajes from './operacionesLenguajes/unionLenguajes';
+import PotenciaLenguaje from './operacionesLenguajes/potenciaLenguaje';
+import ConcatenacionLenguajes from './operacionesLenguajes/concatenacionLenguajes';
+import InterseccionLenguajes from './operacionesLenguajes/interseccionLenguajes';
+import DiferenciaLenguajes from './operacionesLenguajes/diferenciaLenguajes';
 
 const WorkinSpace = ({lenguajes,operacionSeleccionada}) => {
 
@@ -14,19 +18,19 @@ const WorkinSpace = ({lenguajes,operacionSeleccionada}) => {
                 
 
             case 'potencia':
-                return <h3>potencia de un lenguaje</h3>
+                return <PotenciaLenguaje/>
                 
 
             case 'concatenacion':
-                return <h3>concatenación de un lenguaje</h3>
+                return <ConcatenacionLenguajes/>
                 
 
             case 'interseccion':
-                return <h3>Intersección de un lenguaje</h3>
+                return <InterseccionLenguajes/>
                 
 
             case 'diferencia':
-                return <h3>Diferencia de un lenguaje</h3>
+                return <DiferenciaLenguajes/>
                 
 
             case 'union':

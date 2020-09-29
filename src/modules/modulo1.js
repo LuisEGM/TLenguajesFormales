@@ -30,9 +30,33 @@ export const imprimirAlfabetoFormateado = (alfabeto) => {
     }
 }
 
-export const cardinalidadDeUnLenguaje = (alfabeto) => {
-    const cardinalidad = alfabeto.length;
-    return cardinalidad;
+export const imprimirAlfabetoFormateadoLen = (lenguaje) => {
+    
+    if(lenguaje.nameLenguaje === 'Vacio'){
+        return lenguaje.alfabeto[0];
+    }
+    else{
+        if(lenguaje.alfabeto.length !== 0){
+            let stringAlf = '{ ';
+            lenguaje.alfabeto.forEach((e,i) => {
+                //cuando llegue al final que no escriba , si no que cierre la llave
+                if(lenguaje.alfabeto.length-1 === i){
+                    stringAlf = stringAlf + e + ' }';
+                }
+                else{
+                    stringAlf = stringAlf + e + ', ';
+                }
+            })
+            return stringAlf;
+        }   
+    }
+}
+
+export const cardinalidadDeUnLenguaje = (lenguaje) => {
+    if(lenguaje.nameLenguaje === 'Vacio'){
+        return 0
+    }
+    return lenguaje.alfabeto.length;
 }
 
 export const cardinalidadDePalabra = (palabra) => (
