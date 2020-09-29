@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import InvertirLenguaje from './operacionesLenguajes/invertirLenguaje';
+import UnionLenguajes from './operacionesLenguajes/unionLenguajes';
 
 const WorkinSpace = ({lenguajes,operacionSeleccionada}) => {
 
@@ -29,7 +30,7 @@ const WorkinSpace = ({lenguajes,operacionSeleccionada}) => {
                 
 
             case 'union':
-                return <h3>Unión de un lenguaje</h3>
+                return <UnionLenguajes/>
                 
             
             default:

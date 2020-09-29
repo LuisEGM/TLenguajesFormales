@@ -6,7 +6,6 @@ import { imprimirAlfabetoFormateado, cardinalidadDeUnLenguaje } from '../modules
 
 const ListLenguaje = ({lista,elimminarLenguaje}) => {
     
-
     const mostrarLenguajes = () => {
         if(lista.length === 0){
             return <div className="doc-blank" >
