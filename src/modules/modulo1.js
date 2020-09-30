@@ -268,7 +268,15 @@ export const concatenacionLenguajes = (lenguajes) =>{
                     return ["Φ"];
                 }
                 if(nomLenguaje1!="Lenguaje Vacio" && nomLenguaje2!="Lenguaje Vacio" && nomLenguaje1!="Vacio" && nomLenguaje2!="Vacio"){
-                    concatenacionLenguaje.push(lenguaje1[i]+lenguaje2[j]);
+                    if(lenguaje1[i]==="ε"){
+                        concatenacionLenguaje.push(lenguaje2[j]);
+                    }if(lenguaje2[j]==="ε"){
+                        concatenacionLenguaje.push(lenguaje1[i]);
+                    }
+                    if(lenguaje1[i]!="ε"&& lenguaje2[j]!="ε"){
+                        concatenacionLenguaje.push(lenguaje1[i]+lenguaje2[j]);
+                    }
+                    
                 }
                 
             }
