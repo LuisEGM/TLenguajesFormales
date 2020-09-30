@@ -21,7 +21,7 @@ const UnionLenguajes = ({lenguajes}) => {
             setNumeroDeLenguajes(e.target.value)
         }
         else{
-            console.log(e.target.value);
+           // console.log(e.target.value);
             setNumeroDeLenguajes(2);            
         }
     }

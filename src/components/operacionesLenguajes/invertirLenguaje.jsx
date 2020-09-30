@@ -47,7 +47,7 @@ const InvertirLenguajes = ({lenguajes}) => {
                         <label htmlFor="lenguajeSeleccionado">Selecciona un lenguaje</label>
                         <select onChange={handleChange} value={seleccion} className="form-control" id="lenguajeSeleccionado">
                             <option>Lenguajes...</option>
-                            {lenguajes.map(e => <option key={e.nameLenguaje}>{e.nameLenguaje}</option>)}
+                            {lenguajes.map(e => <option key={e.nameLenguaje} >{e.nameLenguaje}</option>)}
                         </select>
                     </div>
                 
