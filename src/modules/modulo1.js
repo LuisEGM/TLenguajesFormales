@@ -152,7 +152,7 @@ export const diferenciaLenguajes = (lenguaje1, lenguaje2) =>{
 export const uniondelenguajes = (lenguaje) =>{
     var lenguaje1 = lenguaje[0].alfabeto;
     var lenguaje2 = lenguaje[1].alfabeto;
-    console.log(lenguaje[2].alfabeto);
+    // console.log(lenguaje[2].alfabeto);
     var x = lenguaje1.length;
     var y = lenguaje2.length;
         
@@ -240,8 +240,8 @@ export const interseccionLenguajes = (lenguajes) =>{
 
 
 export const concatenacionLenguajes = (lenguajes) =>{
-    var lenguaje1= lenguajes[4].alfabeto;
-    var lenguaje2= lenguajes[5].alfabeto;
+    var lenguaje1= lenguajes[0].alfabeto;
+    var lenguaje2= lenguajes[1].alfabeto;
     var x = lenguaje1.length;
     var y = lenguaje2.length;
 

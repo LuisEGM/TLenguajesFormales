@@ -1,20 +1,37 @@
 import React,{useState,useEffect} from 'react';
 import { connect } from 'react-redux';
 
+import { uniondelenguajes, imprimirAlfabetoFormateado } from '../../modules/modulo1';
+
 const UnionLenguajes = ({lenguajes}) => {
 
     const [numeroDeLenguajes,setNumeroDeLenguajes] = useState(2);
     const [nombresDeLenguajesSeleccionados,setNombresDeLenguajesSeleccionados] = useState([]);
+    const [salida,setSalida] = useState([]);
 
     useEffect(()=>{
         mostrarBarrasDeSeleccion();
     },[numeroDeLenguajes])
     
     useEffect(()=>{
-        console.log(nombresDeLenguajesSeleccionados);
+        // console.log(nombresDeLenguajesSeleccionados);
+        trabajandoSalida();
     },[nombresDeLenguajesSeleccionados])
 
-    
+    const trabajandoSalida = () => {
+        // console.log(nombresDeLenguajesSeleccionados);
+        if(nombresDeLenguajesSeleccionados.length !== 0){
+
+            var vecls = [];
+            for(let i=0 ; i < nombresDeLenguajesSeleccionados.length ; i++){
+                let elemento = lenguajes.filter( e => e.nameLenguaje === nombresDeLenguajesSeleccionados[i]);
+                vecls.push(elemento[0]);
+            }
+            
+            setSalida(uniondelenguajes(vecls));
+        }
+    }
+
     const handleChange = e => {
         if(e.target.value >= 2){
             // console.log(e.target.value);
@@ -41,7 +58,17 @@ const UnionLenguajes = ({lenguajes}) => {
             }
             else console.log("no hay nada seleccionado");
         }
-        setNombresDeLenguajesSeleccionados(nombresLenguajesSeleccionados);
+
+        console.log(nombresLenguajesSeleccionados);
+        
+        var seleccionesCompletas = true
+        for(let i=0 ; i < nombresLenguajesSeleccionados.length ; i++){
+            if(nombresLenguajesSeleccionados[i] === "Lenguaje..."){
+                return seleccionesCompletas = false;
+            }
+        }
+        
+        if(seleccionesCompletas) setNombresDeLenguajesSeleccionados(nombresLenguajesSeleccionados);
     }
 
     const mostrarBarrasDeSeleccion = () => {
@@ -87,7 +114,7 @@ const UnionLenguajes = ({lenguajes}) => {
 
             </form>
             <div className="Salida">
-                <p>Aqui se llama a la funcion que se encarga de unir los lenguajes sleecionados y se muestra el resultado</p>
+                <p>{imprimirAlfabetoFormateado(salida)}</p>
             </div>
         </div>
     );

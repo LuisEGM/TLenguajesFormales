@@ -228,6 +228,11 @@
                 justify-content: center;
                 font-size: 1rem;
                 overflow: auto;
+                p{  
+                    padding-top: 10px;
+                    height: 100%;
+                    font-size: 1.5rem;
+                }
             }
 
             .Salida-unica{
@@ -243,7 +248,9 @@
                 font-size: 1rem;
                 overflow: auto;
                 p{
-                    font-size: 2rem;
+                    padding-top: 10px;
+                    height: 100%;
+                    font-size: 1.5rem;
                 }
             }
 
