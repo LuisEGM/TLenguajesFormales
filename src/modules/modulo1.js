@@ -265,7 +265,7 @@ export const concatenacionLenguajes = (lenguajes) =>{
 
                 }
                 if(nomLenguaje1==="Vacio"|| nomLenguaje2==="Vacio"){
-                    return "Φ";
+                    return ["Φ"];
                 }
                 if(nomLenguaje1!="Lenguaje Vacio" && nomLenguaje2!="Lenguaje Vacio" && nomLenguaje1!="Vacio" && nomLenguaje2!="Vacio"){
                     concatenacionLenguaje.push(lenguaje1[i]+lenguaje2[j]);

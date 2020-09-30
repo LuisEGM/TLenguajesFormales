@@ -66,6 +66,16 @@ const ConcatenacionLenguajes = ({lenguajes}) => {
         //si jala carajoo
     }
 
+    const revisandoSalida = () => {
+        if(salida[0] !== "Φ"){
+            return imprimirAlfabetoFormateado(salida)
+        }   
+        else{
+            return "Φ"
+        }     
+        
+    }
+
     return(
         <div className="formato-seleccion-lenguajes">
             <h3>Concatenación entre lenguajes</h3>
@@ -82,7 +92,7 @@ const ConcatenacionLenguajes = ({lenguajes}) => {
 
             </form>
             <div className="Salida-unica">
-                <p>{imprimirAlfabetoFormateado(salida)}</p>
+                <p>{revisandoSalida()}</p>
             </div>
         </div>
     );
