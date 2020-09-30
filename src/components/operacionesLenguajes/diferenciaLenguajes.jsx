@@ -1,15 +1,30 @@
 import React,{useState,useEffect} from 'react';
 import { connect } from 'react-redux';
 
+import { diferenciaLenguajes2, imprimirAlfabetoFormateado } from '../../modules/modulo1';
+
 const DiferenciaLenguajes = ({lenguajes}) => {
 
     const [nombresDeLenguajesSeleccionados,setNombresDeLenguajesSeleccionados] = useState([]);
-    
+    const [salida,setSalida] = useState([]);
+
     useEffect(()=>{
-
-        console.log(nombresDeLenguajesSeleccionados);
-
+        trabajandoSalida();
     },[nombresDeLenguajesSeleccionados])
+
+    const trabajandoSalida = () => {
+        // console.log(nombresDeLenguajesSeleccionados);
+        if(nombresDeLenguajesSeleccionados.length !== 0){
+
+            var vecls = [];
+            for(let i=0 ; i < nombresDeLenguajesSeleccionados.length ; i++){
+                let elemento = lenguajes.filter( e => e.nameLenguaje === nombresDeLenguajesSeleccionados[i]);
+                vecls.push(elemento[0]);
+            }
+            
+            setSalida(diferenciaLenguajes2(vecls));
+        }
+    }
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -22,7 +37,13 @@ const DiferenciaLenguajes = ({lenguajes}) => {
             }
             else console.log("no hay nada seleccionado");
         }
-        setNombresDeLenguajesSeleccionados(nombresLenguajesSeleccionados);
+        console.log(nombresLenguajesSeleccionados);
+        if(nombresLenguajesSeleccionados[0] !== "Lenguaje..."){
+            if(nombresLenguajesSeleccionados[1] !== "Lenguaje..."){
+                setNombresDeLenguajesSeleccionados(nombresLenguajesSeleccionados);
+            }
+        }
+
     }
 
     const mostrarBarrasDeSeleccion = () => {
@@ -59,7 +80,7 @@ const DiferenciaLenguajes = ({lenguajes}) => {
 
             </form>
             <div className="Salida-unica">
-                <p>Aqui se llama a la funcion que se encarga de hallar la diferencia los lenguajes selecionados y se muestra el resultado</p>
+                <p>{imprimirAlfabetoFormateado(salida)}</p>
             </div>
         </div>
     );

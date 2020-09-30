@@ -52,6 +52,24 @@ export const imprimirAlfabetoFormateadoLen = (lenguaje) => {
     }
 }
 
+export const imprimirSimbolosFormateado = (alfabeto) => {
+    
+    if(alfabeto.simbolos.length !== 0){
+        let stringAlf = '{ ';
+        alfabeto.simbolos.forEach((e,i) => {
+            //cuando llegue al final que no escriba , si no que cierre la llave
+            if(alfabeto.simbolos.length-1 === i){
+                stringAlf = stringAlf + e + ' }';
+            }
+            else{
+                stringAlf = stringAlf + e + ', ';
+            }
+        })
+        return stringAlf;
+    }   
+
+}
+
 export const cardinalidadDeUnLenguaje = (lenguaje) => {
     if(lenguaje.nameLenguaje === 'Vacio'){
         return 0
@@ -109,14 +127,14 @@ export const diferenciaLenguajes = (lenguaje1, lenguaje2) =>{
     
         for (var i = 0; i < x; i++){
             for (var j = 0; j < y; j++){
-                if (lenguaje1[i] == lenguaje2[j]){
+                if (lenguaje1[i] === lenguaje2[j]){
                     flag++;
                     break;
                 }
 
 
             }
-            if(flag==0){
+            if(flag===0){
                 console.log(lenguaje1[i]);
                 diferenciaLenguaje.push(lenguaje1[i]);
             }else{
@@ -150,8 +168,8 @@ export const uniondelenguajes = (lenguaje) =>{
 }
 
 export const diferenciaLenguajes2 = (lenguajes) =>{
-    var lenguaje1= lenguajes[3].alfabeto;
-    var lenguaje2= lenguajes[0].alfabeto;
+    var lenguaje1= lenguajes[0].alfabeto;
+    var lenguaje2= lenguajes[1].alfabeto;
     var x = lenguaje1.length;
     var y = lenguaje2.length;
 
@@ -164,14 +182,14 @@ export const diferenciaLenguajes2 = (lenguajes) =>{
     
         for (var i = 0; i < x; i++){
             for (var j = 0; j < y; j++){
-                if (lenguaje1[i] == lenguaje2[j]){
+                if (lenguaje1[i] === lenguaje2[j]){
                     flag++;
                     break;
                 }
 
 
             }
-            if(flag==0){
+            if(flag===0){
                 console.log(lenguaje1[i]);
                 diferenciaLenguaje.push(lenguaje1[i]);
             }else{
