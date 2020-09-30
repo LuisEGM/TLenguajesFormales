@@ -46,8 +46,8 @@ const App = () => {
     //console.log("El lenguaje invertido seria: ",invertirLenguaje(["carro","bota","cafe","solo","algo"]));
     //console.log("la diferencia  seria: ",diferenciaLenguajes2(lenguajes));
     //console.log("la union de los lenguajes seria",uniondelenguajes(lenguajes));
-    console.log("la interseccion de los lenguajes seria",interseccionLenguajes(lenguajes));
-    console.log("la concatenacion de los lenguajes seria",concatenacionLenguajes(lenguajes));
+    // console.log("la interseccion de los lenguajes seria",interseccionLenguajes(lenguajes));
+    // console.log("la concatenacion de los lenguajes seria",concatenacionLenguajes(lenguajes));
     
 
 

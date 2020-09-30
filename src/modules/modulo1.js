@@ -242,6 +242,9 @@ export const interseccionLenguajes = (lenguajes) =>{
 export const concatenacionLenguajes = (lenguajes) =>{
     var lenguaje1= lenguajes[0].alfabeto;
     var lenguaje2= lenguajes[1].alfabeto;
+    var nomLenguaje1 = lenguajes[0].nameLenguaje;
+    var nomLenguaje2 = lenguajes[1].nameLenguaje;
+
     var x = lenguaje1.length;
     var y = lenguaje2.length;
 
@@ -253,7 +256,21 @@ export const concatenacionLenguajes = (lenguajes) =>{
     
         for (var i = 0; i < x; i++){
             for (var j = 0; j < y; j++){
-                concatenacionLenguaje.push(lenguaje1[i]+lenguaje2[j]);
+                if(nomLenguaje1==="Lenguaje Vacio"){
+                    concatenacionLenguaje.push(lenguaje2[j]);
+
+                }
+                if(nomLenguaje2==="Lenguaje Vacio"){
+                    concatenacionLenguaje.push(lenguaje1[i]);
+
+                }
+                if(nomLenguaje1==="Vacio"|| nomLenguaje2==="Vacio"){
+                    return "Φ";
+                }
+                if(nomLenguaje1!="Lenguaje Vacio" && nomLenguaje2!="Lenguaje Vacio" && nomLenguaje1!="Vacio" && nomLenguaje2!="Vacio"){
+                    concatenacionLenguaje.push(lenguaje1[i]+lenguaje2[j]);
+                }
+                
             }
             
 
