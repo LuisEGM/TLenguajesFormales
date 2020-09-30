@@ -94,3 +94,94 @@ export const invertirLenguaje = (lenguaje) => {// recibir un lenguaje
     return lenguajeInvertido;
 
 }
+
+
+export const diferenciaLenguajes = (lenguaje1, lenguaje2) =>{
+    var x = lenguaje1.length;
+    var y = lenguaje2.length;
+
+    var diferenciaLenguaje = [];
+    var flag =0;
+    console.log(x);
+    console.log(y);
+    console.log(lenguaje1);
+    console.log(lenguaje2);
+    
+        for (var i = 0; i < x; i++){
+            for (var j = 0; j < y; j++){
+                if (lenguaje1[i] == lenguaje2[j]){
+                    flag++;
+                    break;
+                }
+
+
+            }
+            if(flag==0){
+                console.log(lenguaje1[i]);
+                diferenciaLenguaje.push(lenguaje1[i]);
+            }else{
+                flag=0;
+            }
+
+        }
+
+
+    return diferenciaLenguaje;
+    
+
+}
+
+export const uniondelenguajes = (lenguaje) =>{
+    var lenguaje1 = lenguaje[0].alfabeto;
+    var lenguaje2 = lenguaje[2].alfabeto;
+    console.log(lenguaje[2].alfabeto);
+    var x = lenguaje1.length;
+    var y = lenguaje2.length;
+        
+        for(var i = 0; i < y; i++){
+            lenguaje1.push(lenguaje2[i]);
+        }
+
+        //eliminando repetidos
+        var union = [... new Set(lenguaje1)];
+    
+  
+    return union;
+}
+
+export const diferenciaLenguajes2 = (lenguajes) =>{
+    var lenguaje1= lenguajes[3].alfabeto;
+    var lenguaje2= lenguajes[0].alfabeto;
+    var x = lenguaje1.length;
+    var y = lenguaje2.length;
+
+    var diferenciaLenguaje = [];
+    var flag =0;
+    console.log(x);
+    console.log(y);
+    console.log(lenguaje1);
+    console.log(lenguaje2);
+    
+        for (var i = 0; i < x; i++){
+            for (var j = 0; j < y; j++){
+                if (lenguaje1[i] == lenguaje2[j]){
+                    flag++;
+                    break;
+                }
+
+
+            }
+            if(flag==0){
+                console.log(lenguaje1[i]);
+                diferenciaLenguaje.push(lenguaje1[i]);
+            }else{
+                flag=0;
+            }
+
+        }
+
+
+    return diferenciaLenguaje;
+    
+
+}
