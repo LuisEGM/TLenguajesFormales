@@ -163,7 +163,6 @@ export const uniondelenguajes = (lenguaje) =>{
         //eliminando repetidos
         var union = [... new Set(lenguaje1)];
     
-  
     return union;
 }
 
