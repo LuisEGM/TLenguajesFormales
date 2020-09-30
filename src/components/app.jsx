@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Store from '../store';
 
-import { cardinalidadDePalabra, invertirPalabra, invertirLenguaje, diferenciaLenguajes2, uniondelenguajes} from '../modules/modulo1';
+import { cardinalidadDePalabra, invertirPalabra, invertirLenguaje, diferenciaLenguajes2, interseccionLenguajes, uniondelenguajes} from '../modules/modulo1';
 
 const App = () => {
 
@@ -21,7 +21,7 @@ const App = () => {
         },
         {
             nameLenguaje:"italiano",
-            alfabeto:["carro1","bot1a","cafe1","solo1","algo"]
+            alfabeto:["carro","bot1a","cafe","solo1","algo"]
         },
         {
             nameLenguaje: 'Vacio',
@@ -33,11 +33,12 @@ const App = () => {
         }
     ];
 
-    console.log("Cardinalidad De Palabra: " ,cardinalidadDePalabra('sebarr'));
-    console.log("La palabra invertida seria: ",invertirPalabra('sebastian'));
-    console.log("El lenguaje invertido seria: ",invertirLenguaje(["carro","bota","cafe","solo","algo"]));
-    console.log("la diferencia  seria: ",diferenciaLenguajes2(lenguajes));
-    console.log("la union de los lenguajes seria",uniondelenguajes(lenguajes));
+   // console.log("Cardinalidad De Palabra: " ,cardinalidadDePalabra('sebarr'));
+    //console.log("La palabra invertida seria: ",invertirPalabra('sebastian'));
+    //console.log("El lenguaje invertido seria: ",invertirLenguaje(["carro","bota","cafe","solo","algo"]));
+    //console.log("la diferencia  seria: ",diferenciaLenguajes2(lenguajes));
+    //console.log("la union de los lenguajes seria",uniondelenguajes(lenguajes));
+    console.log("la interseccion de los lenguajes seria",interseccionLenguajes(lenguajes));
     
 
 

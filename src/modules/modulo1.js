@@ -151,7 +151,7 @@ export const diferenciaLenguajes = (lenguaje1, lenguaje2) =>{
 
 export const uniondelenguajes = (lenguaje) =>{
     var lenguaje1 = lenguaje[0].alfabeto;
-    var lenguaje2 = lenguaje[2].alfabeto;
+    var lenguaje2 = lenguaje[1].alfabeto;
     console.log(lenguaje[2].alfabeto);
     var x = lenguaje1.length;
     var y = lenguaje2.length;
@@ -200,6 +200,41 @@ export const diferenciaLenguajes2 = (lenguajes) =>{
 
 
     return diferenciaLenguaje;
+    
+
+}
+
+
+export const interseccionLenguajes = (lenguajes) =>{
+    var lenguaje1= lenguajes[0].alfabeto;
+    var lenguaje2= lenguajes[1].alfabeto;
+    var x = lenguaje1.length;
+    var y = lenguaje2.length;
+
+    var interseccionLenguaje = [];
+    var flag =0;
+    console.log(x);
+    console.log(y);
+    console.log(lenguaje1);
+    console.log(lenguaje2);
+    
+        for (var i = 0; i < x; i++){
+            for (var j = 0; j < y; j++){
+                if (lenguaje1[i] === lenguaje2[j]){
+                    flag++;
+                    break;
+                }
+            }
+            if(flag===1){
+                console.log(lenguaje1[i]);
+                interseccionLenguaje.push(lenguaje1[i]);
+                flag=0;
+            }else{
+                flag=0;
+            }
+
+        }
+     return interseccionLenguaje;
     
 
 }
