@@ -196,6 +196,19 @@
 
             }
 
+            .row-unica{
+                width: 96%;
+                margin: 20px auto;
+                border: 1px solid rgb(73, 196, 73);
+                padding: 10px;
+                border-radius: 5px;
+                
+                select{
+                    border-radius: 5px;
+                    font-size: 1rem;
+                }
+            }
+
             .boton{
                 margin-top: 10px;
                 border-radius: 5px;
@@ -208,6 +221,20 @@
                 margin: 8px auto;
                 background-color: white;
                 height: 25%;
+                border-radius: 5px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+                overflow: auto;
+            }
+
+            .Salida-unica{
+                width: 96%;
+                margin: 20px auto;
+                background-color: white;
+                height: 40%;
                 border-radius: 5px;
                 display: flex;
                 text-align: center;

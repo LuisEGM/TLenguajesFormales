@@ -1,6 +1,7 @@
 import React from 'react';
 import Page_lenguajes from '../pages/page_lenguajes';
 import Page_alfabetos from '../pages/page_alfabetos';
+import Page_palabras from '../pages/page_palabras';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/" component={Page_lenguajes} />
                     <Route exact path="/alfabetos" component={Page_alfabetos} />
+                    <Route exact path="/palabras" component={Page_palabras} />
                 </Switch>
             </Router>
         </Provider>

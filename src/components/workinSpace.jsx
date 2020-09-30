@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+
 import InvertirLenguaje from './operacionesLenguajes/invertirLenguaje';
 import UnionLenguajes from './operacionesLenguajes/unionLenguajes';
 import PotenciaLenguaje from './operacionesLenguajes/potenciaLenguaje';

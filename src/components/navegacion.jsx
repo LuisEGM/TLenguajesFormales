@@ -9,6 +9,7 @@ const Navegacion = ({location}) => {
                 <Fragment>
                     <Link className="navbar-brand item resaltar" to="/">Lenguajes</Link>                
                     <Link className="navbar-brand item" to="/alfabetos">Alfabetos</Link>
+                    <Link className="navbar-brand item" to="/palabras">Palabras</Link>
                 </Fragment>
             );
         }
@@ -17,6 +18,16 @@ const Navegacion = ({location}) => {
                 <Fragment>
                     <Link className="navbar-brand item" to="/">Lenguajes</Link>                
                     <Link className="navbar-brand item resaltar" to="/alfabetos">Alfabetos</Link>
+                    <Link className="navbar-brand item" to="/palabras">Palabras</Link>
+                </Fragment>
+            );
+        }
+        if(location === "pagepalabras"){
+            return (
+                <Fragment>
+                    <Link className="navbar-brand item" to="/">Lenguajes</Link>                
+                    <Link className="navbar-brand item" to="/alfabetos">Alfabetos</Link>
+                    <Link className="navbar-brand item resaltar" to="/palabras">Palabras</Link>
                 </Fragment>
             );
         }
