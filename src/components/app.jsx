@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Store from '../store';
 
-import { cardinalidadDePalabra, invertirPalabra, invertirLenguaje, diferenciaLenguajes2, interseccionLenguajes, uniondelenguajes} from '../modules/modulo1';
+import { cardinalidadDePalabra, invertirPalabra, invertirLenguaje, diferenciaLenguajes2, interseccionLenguajes, uniondelenguajes, concatenacionLenguajes} from '../modules/modulo1';
 
 const App = () => {
 
@@ -30,6 +30,14 @@ const App = () => {
         {
             nameLenguaje: 'Lenguaje Vacio',
             alfabeto: ["ε"]
+        },
+        {
+            nameLenguaje:"tem1",
+            alfabeto:["corr","beb"]
+        },
+        {
+            nameLenguaje:"tem2",
+            alfabeto:["er","o","imos"]
         }
     ];
 
@@ -39,6 +47,7 @@ const App = () => {
     //console.log("la diferencia  seria: ",diferenciaLenguajes2(lenguajes));
     //console.log("la union de los lenguajes seria",uniondelenguajes(lenguajes));
     console.log("la interseccion de los lenguajes seria",interseccionLenguajes(lenguajes));
+    console.log("la concatenacion de los lenguajes seria",concatenacionLenguajes(lenguajes));
     
 
 

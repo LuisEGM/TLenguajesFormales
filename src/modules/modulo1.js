@@ -238,3 +238,28 @@ export const interseccionLenguajes = (lenguajes) =>{
     
 
 }
+
+
+export const concatenacionLenguajes = (lenguajes) =>{
+    var lenguaje1= lenguajes[4].alfabeto;
+    var lenguaje2= lenguajes[5].alfabeto;
+    var x = lenguaje1.length;
+    var y = lenguaje2.length;
+
+    var concatenacionLenguaje = [];
+    console.log(x);
+    console.log(y);
+    console.log(lenguaje1);
+    console.log(lenguaje2);
+    
+        for (var i = 0; i < x; i++){
+            for (var j = 0; j < y; j++){
+                concatenacionLenguaje.push(lenguaje1[i]+lenguaje2[j]);
+            }
+            
+
+        }
+     return concatenacionLenguaje;
+    
+
+}
