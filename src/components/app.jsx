@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Store from '../store';
 
-import { cardinalidadDePalabra, invertirPalabra, invertirLenguaje, diferenciaLenguajes2} from '../modules/modulo1';
+import { cardinalidadDePalabra, invertirPalabra, invertirLenguaje, diferenciaLenguajes2, uniondelenguajes} from '../modules/modulo1';
 
 const App = () => {
 
@@ -16,15 +16,15 @@ const App = () => {
     let lenguajes=[
         {
             nameLenguaje:"ingles",
-            alfabeto:["carro","bota","cafe","solo","algo"]
+            alfabeto:["carro","bota","cafe","solo","algo","ε"]
         },
         {
             nameLenguaje:"italiano",
-            alfabeto:["carro1","bota","cafe","solo1","algo"]
+            alfabeto:["carro1","bot1a","cafe1","solo1","algo"]
         },
         {
             nameLenguaje: 'Vacio',
-            alfabeto: ["Φ"]
+            alfabeto: []
         },
         {
             nameLenguaje: 'Lenguaje Vacio',
@@ -36,6 +36,7 @@ const App = () => {
     console.log("La palabra invertida seria: ",invertirPalabra('sebastian'));
     console.log("El lenguaje invertido seria: ",invertirLenguaje(["carro","bota","cafe","solo","algo"]));
     console.log("la diferencia  seria: ",diferenciaLenguajes2(lenguajes));
+    console.log("la union de los lenguajes seria",uniondelenguajes(lenguajes));
     
 
 
