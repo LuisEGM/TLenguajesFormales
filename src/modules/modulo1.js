@@ -290,3 +290,77 @@ export const concatenacionLenguajes = (lenguajes) =>{
     
 
 }
+
+
+
+export const diferenciaAlfabetos = (alfabetos) =>{
+    var alfabeto1= alfabetos[0].simbolos;
+    var alfabeto2= alfabetos[1].simbolos;
+    var x = alfabeto1.length;
+    var y = alfabeto2.length;
+
+    var diferenciaAlfabeto = [];
+    var flag =0;
+    console.log(x);
+    console.log(y);
+    console.log(alfabeto1);
+    console.log(alfabeto2);
+    
+        for (var i = 0; i < x; i++){
+            for (var j = 0; j < y; j++){
+                if (alfabeto1[i] === alfabeto2[j]){
+                    flag++;
+                    break;
+                }
+
+
+            }
+            if(flag===0){
+                console.log(alfabeto1[i]);
+                diferenciaAlfabeto.push(alfabeto1[i]);
+            }else{
+                flag=0;
+            }
+
+        }
+
+
+    return diferenciaAlfabeto;
+    
+
+}
+
+
+export const interseccionAlfabetos = (alfabetos) =>{
+    var alfabeto1= alfabetos[0].simbolos;
+    var alfabeto2= alfabetos[1].simbolos;
+    var x = alfabeto1.length;
+    var y = alfabeto2.length;
+
+    var interseccionAlfabetos = [];
+    var flag =0;
+    console.log(x);
+    console.log(y);
+    console.log(alfabeto1);
+    console.log(alfabeto2);
+    
+        for (var i = 0; i < x; i++){
+            for (var j = 0; j < y; j++){
+                if (alfabeto1[i] === alfabeto2[j]){
+                    flag++;
+                    break;
+                }
+            }
+            if(flag===1){
+                console.log(alfabeto1[i]);
+                interseccionAlfabetos.push(alfabeto1[i]);
+                flag=0;
+            }else{
+                flag=0;
+            }
+
+        }
+     return interseccionAlfabetos;
+    
+
+}
