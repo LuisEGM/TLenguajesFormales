@@ -364,3 +364,29 @@ export const interseccionAlfabetos = (alfabetos) =>{
     
 
 }
+
+export const uniondealfabetos = (alfabetos) =>{
+
+    var l = alfabetos.length;
+    var union = [];
+
+    for(var i = 0; i < l; i++ ){
+
+        var alfabeto = alfabeto[i].simbolos;
+        var x = alfabeto.length;
+        if(alfabetos[i].nameAlfabeto === "Vacio"){
+            for(var j = 0; j < x; j++){
+                union.push(alfabeto[j]);
+            }
+        }
+
+
+    }
+
+
+    union = [...new Set(union)];
+
+    return union;
+
+
+}
