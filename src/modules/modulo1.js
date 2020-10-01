@@ -149,20 +149,23 @@ export const diferenciaLenguajes = (lenguaje1, lenguaje2) =>{
 
 }
 
-export const uniondelenguajes = (lenguaje) =>{
-    var lenguaje1 = lenguaje[0].alfabeto;
-    var lenguaje2 = lenguaje[1].alfabeto;
-    // console.log(lenguaje[2].alfabeto);
-    var x = lenguaje1.length;
-    var y = lenguaje2.length;
-        
-        for(var i = 0; i < y; i++){
-            lenguaje1.push(lenguaje2[i]);
-        }
+export const uniondelenguajes = (lenguajes) =>{
+    var l = lenguajes.length;
+    var union = [];
+    for(var i = 0; i < l; i++){
 
-        //eliminando repetidos
-        var union = [... new Set(lenguaje1)];
+        var lenguaje = lenguajes[i].alfabeto;
+        var x = lenguaje.length;
+        
+        if(lenguajes[i].nameLenguaje !== "Vacio" ){
+            for(var j = 0; j < x; j++){
+                union.push(lenguaje[j])     
+            }
+        }
     
+    }
+    
+    union = [...new Set(union)];
     return union;
 }
 
