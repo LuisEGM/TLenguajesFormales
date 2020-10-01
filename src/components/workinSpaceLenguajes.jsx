@@ -8,7 +8,7 @@ import ConcatenacionLenguajes from './operacionesLenguajes/concatenacionLenguaje
 import InterseccionLenguajes from './operacionesLenguajes/interseccionLenguajes';
 import DiferenciaLenguajes from './operacionesLenguajes/diferenciaLenguajes';
 
-const WorkinSpace = ({lenguajes,operacionSeleccionada}) => {
+const WorkinSpaceLenguajes = ({operacionSeleccionada}) => {
 
     const espacioDeOperaciones = () => {
 
@@ -60,9 +60,8 @@ const WorkinSpace = ({lenguajes,operacionSeleccionada}) => {
 
 const mapStateToProps = state => ({
     operacionSeleccionada: state.operacionLenguaje,
-    lenguajes: state.listLenguajes
 })
 
 const mapDispatchToProps = dispach => ({})
 
-export default connect(mapStateToProps,mapDispatchToProps)(WorkinSpace);
+export default connect(mapStateToProps,mapDispatchToProps)(WorkinSpaceLenguajes);

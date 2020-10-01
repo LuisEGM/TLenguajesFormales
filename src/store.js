@@ -25,7 +25,8 @@ const initialState = {
             simbolos:["carro","bota","cafe","solo","algo","ε"]
         }
     ],
-    operacionLenguaje: ''
+    operacionLenguaje: '',
+    operacionAlfabeto: ''
 }
 
 const reducer = (state=initialState,action) => {
@@ -62,6 +63,12 @@ const reducer = (state=initialState,action) => {
             return {
                 ...state,
                 listAlfabetos: state.listAlfabetos.filter(l => l.nameAlfabeto !== action.alfabeto.nameAlfabeto)
+            }
+
+        case 'ACTUALIZAR_OPERACION_ALFABETO':
+            return {
+                ...state,
+                operacionAlfabeto: action.nuevaOperacion
             }
 
         default:

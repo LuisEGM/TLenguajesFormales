@@ -44,7 +44,7 @@ const UnionLenguajes = ({lenguajes}) => {
     }
 
     const handleSubmit = e => {
-        //SU Seleccionado para Union
+        
         e.preventDefault();
 
         // let elemento = document.getElementById("lenguaje1SU");

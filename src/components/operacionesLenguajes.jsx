@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import '../styles/styles-operacionesLengujes.scss';
 import { connect } from 'react-redux';
-import WorkinSpace from './workinSpace';
+import WorkinSpaceLenguajes from './workinSpaceLenguajes';
 
 // import {useState} from 'react';
 
@@ -47,7 +47,7 @@ const OperacionesLenguajes = ({actualizarOperacionLenguaje}) => {
                 </ul>
             </div>
             <div className="col-md-9 workin-space">
-                <WorkinSpace/>
+                <WorkinSpaceLenguajes/>
             </div>
         </Fragment>
     );
