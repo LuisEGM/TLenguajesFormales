@@ -30,7 +30,7 @@ const OperacionesAlfabetos = ({actualizarOperacionAlfabeto}) => {
                 <ul>
                     <li id="union" className="alf" onClick={handleClick} >Union entre Alfabetos</li>
                     <li id="diferencia" className="alf" onClick={handleClick} >Diferencia entre Alfabetos</li>
-                    <li id="interseccion" className="alf" onClick={handleClick} >Intersección de Alfabeto</li>
+                    <li id="interseccion" className="alf" onClick={handleClick} >Intersección entre Alfabetos</li>
                 </ul>
             </div>
             <div className="col-md-9 workin-space">

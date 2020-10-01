@@ -64,11 +64,16 @@ const UnionAlfabetos = ({alfabetos}) => {
         var seleccionesCompletas = true
         for(let i=0 ; i < nombresAlfabetosSeleccionados.length ; i++){
             if(nombresAlfabetosSeleccionados[i] === "Alfabeto..."){
-                return seleccionesCompletas = false;
+                seleccionesCompletas = false;
             }
         }
+
+        console.log(seleccionesCompletas);
+        if(seleccionesCompletas){
+            setNombresDeAlfabetosSeleccionados(nombresAlfabetosSeleccionados);
+        }
+        else alert("En la operación union de alfabetos es necesario\nque complete la cantidad de alfabetos que selecciono.\nDe lo contrario seleccione otra cantidad");
         
-        if(seleccionesCompletas) setNombresDeAlfabetosSeleccionados(nombresAlfabetosSeleccionados);
     }
 
     const mostrarBarrasDeSeleccion = () => {

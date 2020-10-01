@@ -64,11 +64,16 @@ const UnionLenguajes = ({lenguajes}) => {
         var seleccionesCompletas = true
         for(let i=0 ; i < nombresLenguajesSeleccionados.length ; i++){
             if(nombresLenguajesSeleccionados[i] === "Lenguaje..."){
-                return seleccionesCompletas = false;
+                seleccionesCompletas = false;
             }
         }
         
-        if(seleccionesCompletas) setNombresDeLenguajesSeleccionados(nombresLenguajesSeleccionados);
+        console.log(seleccionesCompletas);
+        if(seleccionesCompletas){
+            setNombresDeLenguajesSeleccionados(nombresLenguajesSeleccionados);
+        }
+        else alert("En la operación union de lenguajes es necesario\nque complete la cantidad de lenguajes que selecciono.\nDe lo contrario seleccione otra cantidad");
+        
     }
 
     const mostrarBarrasDeSeleccion = () => {

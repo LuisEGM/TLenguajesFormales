@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import UnionAlfabetos from './operacionesAlfabetos/unionAlfabetos';
+import DiferenciaAlfabetos from './operacionesAlfabetos/diferenciaAlfabetos';
+import InterseccionAlfabetos from './operacionesAlfabetos/interseccionAlfabetos';
 
 const WorkinSpaceAlfabetos = ({operacionSeleccionada}) => {
 
@@ -14,10 +16,10 @@ const WorkinSpaceAlfabetos = ({operacionSeleccionada}) => {
                 return <UnionAlfabetos/>
             
             case 'diferencia':
-                return <h3>Diferencia alfabetos</h3>
+                return <DiferenciaAlfabetos/>
                     
             case 'interseccion':
-                return <h3>Interseccion alfabetos</h3>
+                return <InterseccionAlfabetos/>
             
             default:
                 return <div className="limpio">
