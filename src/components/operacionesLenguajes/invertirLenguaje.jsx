@@ -36,6 +36,9 @@ const InvertirLenguajes = ({lenguajes}) => {
             // console.log(lenguajeInvertido);
             setSalida(lenguajeInvertido);
         }
+        else{
+            alert("En la operación invertir lenguajes es necesario\nque seleccione el lenguaje que va a procesar.");
+        }
     }
 
     return (

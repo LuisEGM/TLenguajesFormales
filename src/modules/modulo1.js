@@ -372,9 +372,9 @@ export const uniondealfabetos = (alfabetos) =>{
 
     for(var i = 0; i < l; i++ ){
 
-        var alfabeto = alfabeto[i].simbolos;
+        var alfabeto = alfabetos[i].simbolos;
         var x = alfabeto.length;
-        if(alfabetos[i].nameAlfabeto === "Vacio"){
+        if(alfabetos[i].nameAlfabeto !== "Vacio"){
             for(var j = 0; j < x; j++){
                 union.push(alfabeto[j]);
             }
@@ -382,7 +382,6 @@ export const uniondealfabetos = (alfabetos) =>{
 
 
     }
-
 
     union = [...new Set(union)];
 

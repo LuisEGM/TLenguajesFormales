@@ -4,37 +4,49 @@ import {connect} from 'react-redux';
 const PotenciaLenguaje = ({lenguajes}) => {
 
     const [seleccion,setSeleccion] = useState('Lenguajes...');
+    const [potencia,setPotencia] = useState(1);
     const [salida,setSalida] = useState([]);
     const [lenguaje,setLenguaje] = useState({nameLenguaje: '',alfabeto:[]})
 
     const handleChange = e => {
-        // console.log("change => ",e.target.value);
-        if(e.target.value !== 'Lenguajes...'){
-            //para que no se quede el resultado anterior
+        // console.log("change => ",e.target.id,e.target.value);
+
+        if(e.target.id === "lenguajeSeleccionado"){    
+            if(e.target.value !== 'Lenguajes...'){
+                //para que no se quede el resultado anterior
             setSalida([]);
             // console.log("change dentro del if",e.target.value);
             var x = e.target.value;
             let leng = lenguajes.filter(e => e.nameLenguaje === x);
             setLenguaje(leng[0])
+            }
+            else{
+                setSalida([]);
+                setLenguaje({nameLenguaje: '',alfabeto:[]})
+            }
+            setSeleccion(e.target.value);
         }
-        else{
-            setSalida([]);
-            setLenguaje({nameLenguaje: '',alfabeto:[]})
+
+        if(e.target.id === "potencia"){
+            setPotencia(e.target.value)
         }
-        setSeleccion(e.target.value);
     }
 
     const handleClick = e => {
         e.preventDefault();
         // console.log(seleccion);
         if(seleccion !== 'Lenguajes...'){
-            let Lenguaje = lenguajes.filter(e => e.nameLenguaje === seleccion);
-            
-            //aqui va el proceso de potenciar el lenguaje
-            //let lenguajeInvertido = invertirLenguaje(Lenguaje[0].alfabeto);
-            //el resultado se mete en salida para que se muestre.
-            // setSalida(lenguajeInvertido);
-        
+            if(potencia >= 1){
+                console.log(lenguaje);
+                //aqui va el proceso de potenciar el lenguaje
+                // setSalida(funcionpotencia(lenguaje,potencia));
+            }
+            else{
+                alert("CUIDADO...La potencia debe ser positiva...!")
+            }
+        }
+        else{
+            alert("En la operación potencia de un lenguaje es necesario\nque seleccione el lenguaje que va a procesar.");
         }
     }
 
@@ -49,6 +61,9 @@ const PotenciaLenguaje = ({lenguajes}) => {
                             <option>Lenguajes...</option>
                             {lenguajes.map(e => <option key={e.nameLenguaje}>{e.nameLenguaje}</option>)}
                         </select>
+                        <div className="col">
+                            <input id="potencia" min="1" onChange={handleChange} value={potencia} type="number" className="form-control" placeholder="potencia"/>
+                        </div>
                     </div>
                 
                 <div className="col-auto">

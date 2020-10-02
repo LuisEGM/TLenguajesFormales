@@ -43,11 +43,11 @@ const InterseccionAlfabetos = ({alfabetos}) => {
                 setNombresDeAlfabetosSeleccionados(nombresAlfabetosSeleccionados);
             }
             else{
-                alert("En la operación diferencia es necesario\nque seleccione dos alfabetos:\npor favor escoja el alfabeto 2");
+                alert("En la operación intersección de alfabetos es necesario\nque seleccione dos alfabetos:\npor favor escoja el alfabeto 2");
             }
         }
         else{
-            alert("En la operación diferencia es necesario\nque seleccione dos alfabetos:\npor favor escoja el alfabeto 1");
+            alert("En la operación intersección de alfabetos es necesario\nque seleccione dos alfabetos:\npor favor escoja el alfabeto 1");
         }
 
     }

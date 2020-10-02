@@ -4,7 +4,7 @@ const initialState = {
     listLenguajes: [
         {
             nameLenguaje:"ingles",
-            alfabeto:["carro","bota","cafe","solo","algo","ε"]
+            alfabeto:["carro","bota","cafe","solo","algo"]
         },
         {
             nameLenguaje:"italiano",
@@ -25,6 +25,7 @@ const initialState = {
             simbolos:["carro","bota","cafe","solo","algo","ε"]
         }
     ],
+    listPalabras: ['hola'],
     operacionLenguaje: '',
     operacionAlfabeto: ''
 }
@@ -69,6 +70,18 @@ const reducer = (state=initialState,action) => {
             return {
                 ...state,
                 operacionAlfabeto: action.nuevaOperacion
+            }
+
+        case 'AGREGAR_PALABRA':
+            return {
+                ...state,
+                listPalabras: state.listPalabras.concat(action.palabra)
+            }    
+
+        case 'ELIMINAR_PALABRA':
+            return {
+                ...state,
+                listPalabras: state.listPalabras.filter(l => l !== action.palabra)
             }
 
         default:

@@ -44,6 +44,12 @@ const ConcatenacionLenguajes = ({lenguajes}) => {
             if(nombresLenguajesSeleccionados[1] !== "Lenguaje..."){
                 setNombresDeLenguajesSeleccionados(nombresLenguajesSeleccionados);
             }
+            else{
+                alert("En la operación concatenación de lenguajes es necesario\nque seleccione dos lenguajes:\npor favor escoja el lenguajes 2");
+            }
+        }
+        else{
+            alert("En la operación concatenación de lenguajes es necesario\nque seleccione dos lenguajes:\npor favor escoja el lenguajes 1");
         }
         
     }

@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { connect } from 'react-redux';
 
-// import { uniondelenguajes, imprimirAlfabetoFormateado } from '../../modules/modulo1';
+import { uniondealfabetos, imprimirAlfabetoFormateado } from '../../modules/modulo1';
 
 const UnionAlfabetos = ({alfabetos}) => {
 
@@ -28,7 +28,7 @@ const UnionAlfabetos = ({alfabetos}) => {
                 vecls.push(elemento[0]);
             }
             
-            // setSalida(uniondelenguajes(vecls));
+            setSalida(uniondealfabetos(vecls));
         }
     }
 
@@ -119,7 +119,7 @@ const UnionAlfabetos = ({alfabetos}) => {
 
             </form>
             <div className="Salida">
-                {/* <p>{imprimirAlfabetoFormateado(salida)}</p> */}
+                <p>{imprimirAlfabetoFormateado(salida)}</p>
             </div>
         </div>
     );

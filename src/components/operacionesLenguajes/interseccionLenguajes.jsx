@@ -43,6 +43,12 @@ const InterseccionLenguajes = ({lenguajes}) => {
             if(nombresLenguajesSeleccionados[1] !== "Lenguaje..."){
                 setNombresDeLenguajesSeleccionados(nombresLenguajesSeleccionados);
             }
+            else{
+                alert("En la operación intersección de lenguajes es necesario\nque seleccione dos lenguajes:\npor favor escoja el lenguaje 2");
+            }
+        }
+        else{
+            alert("En la operación intersección de lenguajes es necesario\nque seleccione dos lenguajes:\npor favor escoja el lenguaje 1");
         }
 
     }
