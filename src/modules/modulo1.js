@@ -393,7 +393,7 @@ export const uniondealfabetos = (alfabetos) =>{
 
 export const potenciaLenguaje = (lenguaje,potencia) => {
     
-    if(potencia !== 0){
+    if(potencia != 0){
         if(potencia !== 1){
             const leng = lenguaje;
             // let resultadoFinal = [];

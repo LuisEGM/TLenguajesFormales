@@ -3,14 +3,6 @@ import { createStore } from 'redux';
 const initialState = {
     listLenguajes: [
         {
-            nameLenguaje:"ingles",
-            alfabeto:["carro","bota","cafe","solo","algo"]
-        },
-        {
-            nameLenguaje:"italiano",
-            alfabeto:["carro1","bota","cafe","solo","algo"]
-        },
-        {
             nameLenguaje: 'Vacio',
             alfabeto: ["Φ"]
         },
@@ -19,13 +11,8 @@ const initialState = {
             alfabeto: ["ε"]
         }
     ],
-    listAlfabetos: [
-        {
-            nameAlfabeto:"ingles",
-            simbolos:["carro","bota","cafe","solo","algo","ε"]
-        }
-    ],
-    listPalabras: ['hola'],
+    listAlfabetos: [],
+    listPalabras: [],
     operacionLenguaje: '',
     operacionAlfabeto: ''
 }
