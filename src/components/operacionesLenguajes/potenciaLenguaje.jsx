@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
+import { potenciaLenguaje, imprimirAlfabetoFormateado } from '../../modules/modulo1';
+
 const PotenciaLenguaje = ({lenguajes}) => {
 
     const [seleccion,setSeleccion] = useState('Lenguajes...');
-    const [potencia,setPotencia] = useState(1);
+    const [potencia,setPotencia] = useState(0);
     const [salida,setSalida] = useState([]);
     const [lenguaje,setLenguaje] = useState({nameLenguaje: '',alfabeto:[]})
 
@@ -36,18 +38,27 @@ const PotenciaLenguaje = ({lenguajes}) => {
         e.preventDefault();
         // console.log(seleccion);
         if(seleccion !== 'Lenguajes...'){
-            if(potencia >= 1){
+            if(potencia >= 0){
                 console.log(lenguaje);
                 //aqui va el proceso de potenciar el lenguaje
-                // setSalida(funcionpotencia(lenguaje,potencia));
+                setSalida(potenciaLenguaje(lenguaje,potencia));
             }
             else{
-                alert("CUIDADO...La potencia debe ser positiva...!")
+                alert("CUIDADO...La potencia debe ser mayor o igual a 0...!")
             }
         }
         else{
             alert("En la operación potencia de un lenguaje es necesario\nque seleccione el lenguaje que va a procesar.");
         }
+    }
+
+    const revisandoSalida = () => {
+        if(salida[0] !== "ε"){
+            return imprimirAlfabetoFormateado(salida)
+        }   
+        else{
+            return "{ε}";
+        }        
     }
 
     return (
@@ -62,7 +73,7 @@ const PotenciaLenguaje = ({lenguajes}) => {
                             {lenguajes.map(e => <option key={e.nameLenguaje}>{e.nameLenguaje}</option>)}
                         </select>
                         <div className="col">
-                            <input id="potencia" min="1" onChange={handleChange} value={potencia} type="number" className="form-control" placeholder="potencia"/>
+                            <input id="potencia" min="0" onChange={handleChange} value={potencia} type="number" className="form-control" placeholder="potencia"/>
                         </div>
                     </div>
                 
@@ -71,9 +82,7 @@ const PotenciaLenguaje = ({lenguajes}) => {
                 </div>
             </form>
             <div className="salida">
-                {/* {lenguajes.length !== 0 && 
-                <p>{imprimirAlfabetoFormateado(salida)}</p>
-                } */}
+                <p>{revisandoSalida()}</p>
             </div>
         </div>
     );

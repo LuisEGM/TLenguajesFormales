@@ -389,3 +389,29 @@ export const uniondealfabetos = (alfabetos) =>{
 
 
 }
+
+
+export const potenciaLenguaje = (lenguaje,potencia) => {
+    
+    if(potencia !== 0){
+        if(potencia !== 1){
+            const leng = lenguaje;
+            // let resultadoFinal = [];
+            var resultadoParcial = {nameLenguaje: "resParcial",alfabeto: []}
+            resultadoParcial.alfabeto = lenguaje.alfabeto;
+            for(let i=2 ; i <= potencia ; i++){
+                // console.log(`resparcial`,resultadoParcial.alfabeto);
+                // console.log(`lenguaje`,lenguaje.alfabeto);
+                resultadoParcial.alfabeto = concatenacionLenguajes([resultadoParcial,leng]);
+            }
+            return resultadoParcial.alfabeto;
+        }
+        else{
+            return [lenguaje];
+        }
+    }
+    else{
+        return ["ε"]
+    }
+
+}
