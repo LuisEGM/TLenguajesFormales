@@ -1,0 +1,3 @@
+[1003/152339.466:ERROR:process_reader_win.cc(151)] SuspendThread: Acceso denegado. (0x5)
+[1003/152345.606:ERROR:exception_snapshot_win.cc(99)] thread ID 3032 not found in process
+[1003/152346.184:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Se intentó obtener acceso a un proceso que está cerrándose. (0xc000010a)
