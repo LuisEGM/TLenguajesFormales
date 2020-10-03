@@ -40,13 +40,18 @@ const PotenciaLenguaje = ({lenguajes}) => {
         if(seleccion !== 'Lenguajes...'){
             if(lenguaje.nameLenguaje !== 'Vacio'){
                 if(lenguaje.nameLenguaje !== 'Lenguaje Vacio'){
-                    if(potencia >= 0){
-                        console.log(lenguaje);
-                        //aqui va el proceso de potenciar el lenguaje
-                        setSalida(potenciaLenguajeRecursiva(lenguaje.alfabeto,potencia));
+                    if(potencia == 0){
+                        setSalida(["Φ"])
                     }
                     else{
-                        alert("CUIDADO...La potencia debe ser mayor o igual a 0...!")
+                        if(potencia >= 0){
+                            console.log(lenguaje);
+                            //aqui va el proceso de potenciar el lenguaje
+                            setSalida(potenciaLenguajeRecursiva(lenguaje.alfabeto,potencia));
+                        }
+                        else{
+                            alert("CUIDADO...La potencia debe ser mayor o igual a 0...!")
+                        }
                     }
                 }
                 else{
