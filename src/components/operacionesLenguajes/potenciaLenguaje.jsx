@@ -82,7 +82,7 @@ const PotenciaLenguaje = ({lenguajes}) => {
                 </div>
             </form>
             <div className="salida">
-                <p>{revisandoSalida()}</p>
+                <p className="pot">{revisandoSalida()}</p>
             </div>
         </div>
     );

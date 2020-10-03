@@ -136,8 +136,9 @@
                     font-size: 1rem;
                 }
                 .col{
-                    // width: 200px;
+                    width: 150px;
                     display: flex;
+                    padding: 0;
                     justify-content: center;
                     input{
                         border-radius: 5px;
@@ -168,7 +169,10 @@
                 text-align: center;
                 justify-content: center;
                 align-items: center;
-        
+                p.pot{
+                    width: 100%;
+                    font-size: .8rem;
+                }
             }
 
         }
