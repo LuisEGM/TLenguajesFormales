@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/TLenguajesFormales/static/css/main.b3125535.chunk.css",
+    "main.js": "/TLenguajesFormales/static/js/main.107c1b45.chunk.js",
+    "main.js.map": "/TLenguajesFormales/static/js/main.107c1b45.chunk.js.map",
+    "runtime-main.js": "/TLenguajesFormales/static/js/runtime-main.76afafd1.js",
+    "runtime-main.js.map": "/TLenguajesFormales/static/js/runtime-main.76afafd1.js.map",
+    "static/css/2.6d04c983.chunk.css": "/TLenguajesFormales/static/css/2.6d04c983.chunk.css",
+    "static/js/2.079a78b5.chunk.js": "/TLenguajesFormales/static/js/2.079a78b5.chunk.js",
+    "static/js/2.079a78b5.chunk.js.map": "/TLenguajesFormales/static/js/2.079a78b5.chunk.js.map",
+    "index.html": "/TLenguajesFormales/index.html",
+    "precache-manifest.fa1fcbe1501972fd4ed7d557d529c6c7.js": "/TLenguajesFormales/precache-manifest.fa1fcbe1501972fd4ed7d557d529c6c7.js",
+    "service-worker.js": "/TLenguajesFormales/service-worker.js",
+    "static/css/2.6d04c983.chunk.css.map": "/TLenguajesFormales/static/css/2.6d04c983.chunk.css.map",
+    "static/css/main.b3125535.chunk.css.map": "/TLenguajesFormales/static/css/main.b3125535.chunk.css.map",
+    "static/js/2.079a78b5.chunk.js.LICENSE.txt": "/TLenguajesFormales/static/js/2.079a78b5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76afafd1.js",
+    "static/css/2.6d04c983.chunk.css",
+    "static/js/2.079a78b5.chunk.js",
+    "static/css/main.b3125535.chunk.css",
+    "static/js/main.107c1b45.chunk.js"
+  ]
+}
