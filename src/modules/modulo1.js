@@ -390,7 +390,7 @@ export const uniondealfabetos = (alfabetos) =>{
 
 }
 
-
+//funciona
 export const potenciaLenguaje = (lenguaje,potencia) => {
     
     if(potencia != 0){
@@ -414,4 +414,34 @@ export const potenciaLenguaje = (lenguaje,potencia) => {
         return ["ε"]
     }
 
+}
+
+
+// Seccion de potencia con recursividad sin validacion de vacio y lenguaje vacio, pot15 mas de 14 millones de concatenaciones
+
+const concatenacionEspecialAlfabetos = (alfabetos) =>{
+    var lenguaje1= alfabetos[0];
+    var lenguaje2= alfabetos[1];
+    var x = lenguaje1.length;
+    var y = lenguaje2.length;
+    var concatenacionLenguaje = [];
+    for (var i = 0; i < x; i++){
+        for (var j = 0; j < y; j++){
+                concatenacionLenguaje.push(lenguaje1[i]+lenguaje2[j]);        
+        }
+    }
+    return concatenacionLenguaje;
+}
+
+export const potenciaLenguajeRecursiva = (alfabeto,potencia) => {
+    const alf = alfabeto;
+    var resultadoParcial = [];
+    resultadoParcial = alfabeto;
+    if(potencia == 1){
+        resultadoParcial = alfabeto;
+    }
+    else{
+        resultadoParcial = concatenacionEspecialAlfabetos([potenciaLenguajeRecursiva(resultadoParcial,potencia-1),alf])
+    }
+    return resultadoParcial;
 }

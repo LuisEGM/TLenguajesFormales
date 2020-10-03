@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import { potenciaLenguaje, imprimirAlfabetoFormateado } from '../../modules/modulo1';
+import { potenciaLenguajeRecursiva, imprimirAlfabetoFormateado } from '../../modules/modulo1';
 
 const PotenciaLenguaje = ({lenguajes}) => {
 
@@ -38,13 +38,23 @@ const PotenciaLenguaje = ({lenguajes}) => {
         e.preventDefault();
         // console.log(seleccion);
         if(seleccion !== 'Lenguajes...'){
-            if(potencia >= 0){
-                console.log(lenguaje);
-                //aqui va el proceso de potenciar el lenguaje
-                setSalida(potenciaLenguaje(lenguaje,potencia));
+            if(lenguaje.nameLenguaje !== 'Vacio'){
+                if(lenguaje.nameLenguaje !== 'Lenguaje Vacio'){
+                    if(potencia >= 0){
+                        console.log(lenguaje);
+                        //aqui va el proceso de potenciar el lenguaje
+                        setSalida(potenciaLenguajeRecursiva(lenguaje.alfabeto,potencia));
+                    }
+                    else{
+                        alert("CUIDADO...La potencia debe ser mayor o igual a 0...!")
+                    }
+                }
+                else{
+                    setSalida(["ε"])
+                }
             }
             else{
-                alert("CUIDADO...La potencia debe ser mayor o igual a 0...!")
+                setSalida(["Φ"]);
             }
         }
         else{
@@ -53,12 +63,15 @@ const PotenciaLenguaje = ({lenguajes}) => {
     }
 
     const revisandoSalida = () => {
-        if(salida[0] !== "ε"){
+        if(salida[0] !== "ε" && salida[0] !== "Φ"){
             return imprimirAlfabetoFormateado(salida)
         }   
-        else{
-            return "{ε}";
-        }        
+        if(salida[0] === "Φ"){
+            return "Φ";
+        }
+        if(salida[0] === "ε"){
+            return "{ε}"
+        }
     }
 
     return (
