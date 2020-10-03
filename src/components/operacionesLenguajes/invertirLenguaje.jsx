@@ -62,6 +62,7 @@ const InvertirLenguajes = ({lenguajes}) => {
                 { 
                 <Fragment>
                     <p>{imprimirAlfabetoFormateado(lenguaje.alfabeto)}</p>
+                    <p> = </p>
                     <p>{imprimirAlfabetoFormateado(salida)}</p>
                 </Fragment>
                 }
